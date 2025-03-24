@@ -9,6 +9,7 @@ interface ServiceCardProps {
   icon: LucideIcon;
   link: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ServiceCard = ({
@@ -17,6 +18,7 @@ const ServiceCard = ({
   icon: Icon,
   link,
   className,
+  style,
 }: ServiceCardProps) => {
   return (
     <Link
@@ -25,6 +27,7 @@ const ServiceCard = ({
         "block group p-6 rounded-lg border border-border bg-card shadow-sm card-hover animate-on-scroll",
         className
       )}
+      style={style}
     >
       <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center bg-secondary text-gold group-hover:bg-gold group-hover:text-white transition-colors">
         <Icon className="h-6 w-6" />

@@ -8,6 +8,7 @@ interface TestimonialCardProps {
   position?: string;
   rating: 1 | 2 | 3 | 4 | 5;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const TestimonialCard = ({
@@ -16,6 +17,7 @@ const TestimonialCard = ({
   position,
   rating,
   className,
+  style,
 }: TestimonialCardProps) => {
   return (
     <div
@@ -23,6 +25,7 @@ const TestimonialCard = ({
         "p-6 rounded-lg border border-border bg-card shadow-sm animate-on-scroll",
         className
       )}
+      style={style}
     >
       <div className="flex mb-4">
         {Array.from({ length: 5 }).map((_, i) => (

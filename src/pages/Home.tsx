@@ -1,18 +1,17 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import PortfolioItem from "@/components/PortfolioItem";
-import { CalendarCheck, Gift, GlassWater, Laptop, Music, Ring, Users } from "lucide-react";
+import { CalendarCheck, Diamond, Gift, GlassWater, Laptop, Music, Users } from "lucide-react";
 
 // Mock data
 const services = [
   {
     title: "Mariages",
     description: "Organisation complète de votre mariage, de la cérémonie à la réception.",
-    icon: Ring,
+    icon: Diamond,
     link: "/services#mariages"
   },
   {

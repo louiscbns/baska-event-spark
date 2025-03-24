@@ -1,15 +1,14 @@
-
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, CheckCircle, ChevronsDown, GlassWater, Laptop, Music, Ring, Sparkles, UserRound, Users } from "lucide-react";
+import { Calendar, CheckCircle, ChevronsDown, Diamond, GlassWater, Laptop, Music, Sparkles, UserRound, Users } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Service categories
 const serviceCategories = [
   {
     id: "mariages",
-    icon: Ring,
+    icon: Diamond,
     title: "Mariages",
     description: "Nous prenons en charge tous les aspects de votre jour spécial, des premiers préparatifs à la dernière danse."
   },

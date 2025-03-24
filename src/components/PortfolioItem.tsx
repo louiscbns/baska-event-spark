@@ -9,6 +9,7 @@ interface PortfolioItemProps {
   imageSrc: string;
   description: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const PortfolioItem = ({
@@ -17,6 +18,7 @@ const PortfolioItem = ({
   imageSrc,
   description,
   className,
+  style,
 }: PortfolioItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,6 +30,7 @@ const PortfolioItem = ({
           className
         )}
         onClick={() => setIsOpen(true)}
+        style={style}
       >
         <div className="relative overflow-hidden aspect-[4/3]">
           <img

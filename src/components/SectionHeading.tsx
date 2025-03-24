@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const SectionHeading = ({
@@ -13,6 +14,7 @@ const SectionHeading = ({
   subtitle,
   centered = false,
   className,
+  style,
 }: SectionHeadingProps) => {
   return (
     <div
@@ -21,6 +23,7 @@ const SectionHeading = ({
         centered && "text-center",
         className
       )}
+      style={style}
     >
       <h2 className="section-heading animate-on-scroll">{title}</h2>
       {subtitle && (
