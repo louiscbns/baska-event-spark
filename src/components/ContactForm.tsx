@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { LoaderCircle } from "lucide-react";
+import { createClient } from "@supabase/supabase-js";
+
+// Initialize Supabase client
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,14 +29,30 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      // Add timestamp to the form data
+      const contactData = {
+        ...formData,
+        created_at: new Date().toISOString(),
+        recipient_email: "louis.cabanis@baska-events.fr"
+      };
+      
+      // Insert data into Supabase
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert(contactData);
+      
+      if (error) {
+        throw error;
+      }
+      
       toast.success("Votre message a été envoyé avec succès!");
+      
+      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -38,7 +60,12 @@ const ContactForm = () => {
         subject: "",
         message: "",
       });
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Une erreur s'est produite. Veuillez réessayer.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
