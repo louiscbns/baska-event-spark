@@ -7,10 +7,14 @@ import { toast } from "sonner";
 import { LoaderCircle } from "lucide-react";
 import { createClient } from "@supabase/supabase-js";
 
-// Initialize Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Initialize Supabase client with fallback values for development
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+
+// Initialize Supabase client only if URL is available
+const supabase = supabaseUrl 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -40,6 +44,14 @@ const ContactForm = () => {
         created_at: new Date().toISOString(),
         recipient_email: "louis.cabanis@baska-events.fr"
       };
+      
+      // Check if Supabase client is initialized
+      if (!supabase) {
+        console.error("Supabase client not initialized. Check your environment variables.");
+        toast.error("Configuration du serveur manquante. Veuillez contacter l'administrateur.");
+        setIsLoading(false);
+        return;
+      }
       
       // Insert data into Supabase
       const { error } = await supabase
