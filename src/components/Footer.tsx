@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -22,16 +22,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/baska.events"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gold transition-colors"
@@ -49,7 +40,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://www.mariages.net/wedding-planner/baska-events"
+                href="https://www.mariages.net/musique-mariage/baska-events--e354227"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gold transition-colors"
@@ -122,13 +113,13 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <span className="text-gray-300">
-                  123 Avenue des Événements<br />75001 Paris, France
+                  2 Avenue Octave Gréard<br />75007 Paris, France
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-gold shrink-0" />
-                <a href="tel:+33123456789" className="text-gray-300 hover:text-gold transition-colors">
-                  +33 1 23 45 67 89
+                <a href="tel:+33782491428" className="text-gray-300 hover:text-gold transition-colors">
+                  +33 7 82 49 14 28
                 </a>
               </li>
               <li className="flex items-center">

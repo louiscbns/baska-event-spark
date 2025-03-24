@@ -1,7 +1,7 @@
 
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -42,8 +42,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Notre adresse</h3>
                     <p className="text-muted-foreground">
-                      123 Avenue des Événements<br />
-                      75001 Paris, France
+                      2 Avenue Octave Gréard<br />
+                      75007 Paris, France
                     </p>
                   </div>
                 </div>
@@ -55,8 +55,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Téléphone</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+33123456789" className="hover:text-gold transition-colors">
-                        +33 1 23 45 67 89
+                      <a href="tel:+33782491428" className="hover:text-gold transition-colors">
+                        +33 7 82 49 14 28
                       </a>
                     </p>
                   </div>
@@ -95,22 +95,13 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold mb-4 animate-on-scroll">Suivez-nous</h3>
                 <div className="flex space-x-4 animate-on-scroll">
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/baska.events"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center hover:bg-gold hover:text-white transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram className="h-5 w-5" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center hover:bg-gold hover:text-white transition-colors"
-                    aria-label="Facebook"
-                  >
-                    <Facebook className="h-5 w-5" />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/baska-events/"
@@ -122,7 +113,7 @@ const Contact = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.mariages.net/wedding-planner/baska-events"
+                    href="https://www.mariages.net/musique-mariage/baska-events--e354227"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center hover:bg-gold hover:text-white transition-colors"
@@ -172,7 +163,7 @@ const Contact = () => {
           <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg animate-on-scroll">
             <iframe
               title="Carte Baska Events"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2284710254934!2d2.2922926157081284!3d48.87071207928844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fec746d386b%3A0xcf9132812b1f7349!2sArc%20de%20Triomphe!5e0!3m2!1sfr!2sfr!4v1627905645330!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1634139182965!2d2.2956184!3d48.85603169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2s2%20Av.%20Octave%20Gr%C3%A9ard%2C%2075007%20Paris!5e0!3m2!1sfr!2sfr!4v1642424454899!5m2!1sfr!2sfr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
