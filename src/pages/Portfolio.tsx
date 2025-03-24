@@ -252,7 +252,7 @@ const Portfolio = () => {
               <Button asChild size="lg" className="btn-primary">
                 <Link to="/contact">Nous contacter</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
                 <Link to="/services">Explorer nos services</Link>
               </Button>
             </div>

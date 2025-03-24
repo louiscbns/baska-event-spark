@@ -69,8 +69,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      <a href="mailto:contact@baska-events.fr" className="hover:text-gold transition-colors">
-                        contact@baska-events.fr
+                      <a href="mailto:louis.cabanis@baska-events.fr" className="hover:text-gold transition-colors">
+                        louis.cabanis@baska-events.fr
                       </a>
                     </p>
                   </div>
@@ -163,7 +163,7 @@ const Contact = () => {
           <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg animate-on-scroll">
             <iframe
               title="Carte Baska Events"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1634139182965!2d2.2956184!3d48.85603169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2s2%20Av.%20Octave%20Gr%C3%A9ard%2C%2075007%20Paris!5e0!3m2!1sfr!2sfr!4v1642424454899!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5250.169109653425!2d2.29058867695393!3d48.85659800083212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673a04c7ce003%3A0x978f7d6a7185ed5b!2sAgence%20de%20DJ%20-%20Baska%20Events!5e0!3m2!1sen!2sfr!4v1742856828362!5m2!1sen!2sfr"
               width="100%"
               height="100%"
               style={{ border: 0 }}

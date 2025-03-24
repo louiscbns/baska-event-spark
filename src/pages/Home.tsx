@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import PortfolioItem from "@/components/PortfolioItem";
 import { CalendarCheck, Diamond, Gift, GlassWater, Laptop, Music, Users } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 // Mock data
 const services = [
@@ -106,6 +107,11 @@ const upcomingEvents = [
 ];
 
 const Home = () => {
+  const aboutRef = useIntersectionObserver();
+  const servicesRef = useIntersectionObserver();
+  const portfolioRef = useIntersectionObserver();
+  const testimonialsRef = useIntersectionObserver();
+
   return (
     <>
       {/* Hero Section */}
@@ -135,7 +141,7 @@ const Home = () => {
               <Button asChild size="lg" className="btn-primary">
                 <Link to="/contact">Demander un devis</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
                 <Link to="/services">Découvrir nos services</Link>
               </Button>
             </div>
@@ -144,7 +150,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white dark:bg-charcoal-dark">
+      <section className="py-20 bg-white dark:bg-charcoal-dark" ref={aboutRef}>
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -177,7 +183,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-champagne-light dark:bg-charcoal">
+      <section className="py-20 bg-champagne-light dark:bg-charcoal" ref={servicesRef}>
         <div className="container-custom">
           <SectionHeading
             title="Nos services"
@@ -205,7 +211,7 @@ const Home = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 bg-white dark:bg-charcoal-dark">
+      <section className="py-20 bg-white dark:bg-charcoal-dark" ref={portfolioRef}>
         <div className="container-custom">
           <SectionHeading
             title="Nos réalisations"
@@ -233,7 +239,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-secondary/50 dark:bg-charcoal">
+      <section className="py-20 bg-secondary/50 dark:bg-charcoal" ref={testimonialsRef}>
         <div className="container-custom">
           <SectionHeading
             title="Ce que disent nos clients"

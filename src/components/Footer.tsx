@@ -1,10 +1,41 @@
-
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
+import { NewsletterFormData } from "@/types/newsletter";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from("newsletter_subscribers")
+        .insert([{ email }]);
+
+      if (error) throw error;
+
+      toast.success("Inscription réussie ! Veuillez confirmer votre email.");
+      setEmail("");
+    } catch (error) {
+      if (error instanceof Error) {
+        if (error.message.includes("unique constraint")) {
+          toast.error("Cette adresse email est déjà inscrite à la newsletter.");
+        } else {
+          toast.error("Une erreur est survenue. Veuillez réessayer.");
+        }
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <footer className="bg-charcoal-dark text-white pt-16 pb-8">
@@ -124,8 +155,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-gold shrink-0" />
-                <a href="mailto:contact@baska-events.fr" className="text-gray-300 hover:text-gold transition-colors">
-                  contact@baska-events.fr
+                <a href="mailto:louis.cabanis@baska-events.fr" className="text-gray-300 hover:text-gold transition-colors">
+                  louis.cabanis@baska-events.fr
                 </a>
               </li>
             </ul>
@@ -137,15 +168,22 @@ const Footer = () => {
             <p className="text-gray-300 text-sm mb-4">
               Inscrivez-vous à notre newsletter pour recevoir nos actualités et offres spéciales.
             </p>
-            <form className="space-y-2">
+            <form onSubmit={handleSubmit} className="space-y-2">
               <input
                 type="email"
                 placeholder="Votre email"
                 className="w-full px-4 py-2 rounded-md bg-charcoal-light text-white border border-gray-700 focus:outline-none focus:border-gold"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isLoading}
               />
-              <Button type="submit" className="w-full bg-gold hover:bg-gold-dark text-charcoal-dark">
-                S'inscrire
+              <Button 
+                type="submit" 
+                className="w-full bg-gold hover:bg-gold-dark text-charcoal-dark"
+                disabled={isLoading}
+              >
+                {isLoading ? "Inscription..." : "S'inscrire"}
               </Button>
             </form>
           </div>

@@ -13,19 +13,19 @@ const testimonials = [
     items: [
       {
         quote: "Baska Events a transformé notre mariage en un événement magique. Chaque détail était parfait et nos invités en parlent encore!",
-        author: "Sophie & Thomas",
+        author: "S & T",
         position: "Mariage à Saint-Tropez",
         rating: 5 as const
       },
       {
         quote: "L'équipe de Baska Events a su capturer notre vision et la transformer en une réalité qui dépassait nos attentes. Un grand merci pour ce jour parfait!",
-        author: "Marie & Jean",
+        author: "M & J",
         position: "Mariage en Provence",
         rating: 5 as const
       },
       {
         quote: "Nous avons pu profiter pleinement de notre journée sans stress grâce à la coordination impeccable de Baska Events. Professionnalisme et créativité au rendez-vous!",
-        author: "Claire & Antoine",
+        author: "C & A",
         position: "Mariage à Paris",
         rating: 5 as const
       }
@@ -36,21 +36,21 @@ const testimonials = [
     items: [
       {
         quote: "Notre séminaire d'entreprise a été un véritable succès grâce à Baska Events. Organisation impeccable et réactivité exemplaire.",
-        author: "Jean-Marc Dupont",
-        position: "Directeur Marketing, TechFuture",
+        author: "J. D",
+        position: "Directeur Marketing",
         rating: 5 as const
       },
       {
         quote: "Le lancement de notre produit organisé par Baska Events a eu un impact considérable sur notre image de marque. Un événement mémorable!",
-        author: "Amélie Renard",
-        position: "CEO, LuxeBrand",
+        author: "A. R",
+        position: "CEO",
         rating: 5 as const
       },
       {
         quote: "Professionnalisme, créativité et efficacité: Baska Events a parfaitement compris nos enjeux et a créé un événement corporate qui a dépassé nos attentes.",
-        author: "Philippe Martin",
-        position: "Directeur Général, InnovGroup",
-        rating: 4 as const
+        author: "P. M",
+        position: "Directeur Général",
+        rating: 5 as const
       }
     ]
   },
@@ -59,20 +59,20 @@ const testimonials = [
     items: [
       {
         quote: "La fête d'anniversaire organisée pour mes 40 ans était exactement ce que j'avais imaginé. Je recommande vivement!",
-        author: "Claire Martin",
+        author: "C. M",
         position: "Anniversaire 40 ans",
         rating: 5 as const
       },
       {
-        quote: "Baska Events a créé une fête d'anniversaire surprise pour mon mari qui restera gravée dans nos mémoires. Attention aux détails impressionnante!",
-        author: "Isabelle Dubois",
+        quote: "Baska Events a créé une fête d'anniversaire surprise pour mon mari qui restera gravée dans nos mémoires.",
+        author: "I. D",
         position: "Anniversaire 50 ans",
         rating: 5 as const
       },
       {
-        quote: "Pour l'anniversaire de ma fille, Baska Events a créé un monde enchanté qui a émerveillé tous les enfants. Organisation parfaite!",
-        author: "Nathalie Lambert",
-        position: "Anniversaire 10 ans",
+        quote: "Pour mes 18 ans, Baska Events a créé une soirée magique et élégante qui restera gravée dans ma mémoire. Une soirée exceptionnelle!",
+        author: "N. L",
+        position: "Anniversaire 18 ans",
         rating: 5 as const
       }
     ]
@@ -82,19 +82,19 @@ const testimonials = [
     items: [
       {
         quote: "Notre soirée privée organisée par Baska Events était tout simplement exceptionnelle. Ambiance, décoration, service: tout était parfait!",
-        author: "Alexandre Leclerc",
+        author: "A. L",
         position: "Soirée d'été",
         rating: 5 as const
       },
       {
         quote: "Baska Events a transformé ma vision en une soirée élégante et mémorable. Leur attention aux détails fait toute la différence.",
-        author: "Victoria Moreau",
+        author: "V. M",
         position: "Soirée de gala",
         rating: 5 as const
       },
       {
         quote: "Pour ma pool party annuelle, Baska Events a créé une ambiance festive et sophistiquée qui a ravi tous mes invités.",
-        author: "Nicolas Bernard",
+        author: "N. B",
         position: "Pool Party",
         rating: 4 as const
       }
@@ -105,7 +105,7 @@ const testimonials = [
 // Featured testimonial
 const featuredTestimonial = {
   quote: "Travailler avec Baska Events a été une expérience exceptionnelle du début à la fin. Leur équipe a écouté nos besoins, compris notre vision et l'a transformée en un événement qui a dépassé toutes nos attentes. Leur professionnalisme, leur créativité et leur souci du détail sont vraiment impressionnants. Grâce à eux, nous avons pu profiter pleinement de notre journée sans stress, sachant que tout était entre de bonnes mains. Je ne peux que les recommander chaleureusement à quiconque souhaite organiser un événement mémorable.",
-  author: "Émilie & Laurent Dubois",
+  author: "E. & L. D",
   position: "Mariage au Château de Versailles",
   rating: 5 as const,
   image: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png"
@@ -163,7 +163,6 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Grid */}
       <section className="py-20 bg-secondary/50 dark:bg-charcoal">
         <div className="container-custom">
@@ -239,8 +238,8 @@ const Testimonials = () => {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
             {[
-              { label: "Clients satisfaits", value: "500+" },
-              { label: "Événements organisés", value: "200+" },
+              { label: "Clients satisfaits", value: "150+" },
+              { label: "Événements organisés", value: "100+" },
               { label: "Taux de satisfaction", value: "98%" },
               { label: "Recommandations", value: "95%" }
             ].map((stat, index) => (
@@ -265,10 +264,10 @@ const Testimonials = () => {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
               <Button asChild size="lg" className="btn-primary">
-                <a href="mailto:testimonials@baska-events.fr">Partager mon témoignage</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0xfV2FkoGzYBioG5Pl17ZzLa0kVPlrK73R7uYtGRaqKhZwQ/viewform?usp=pp_url" target="_blank" rel="noopener noreferrer">Partager mon témoignage</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                <a href="https://g.page/r/baska-events/review" target="_blank" rel="noopener noreferrer">
+                <a href="https://maps.app.goo.gl/khr3QxX531KpPKM66" target="_blank" rel="noopener noreferrer">
                   Laisser un avis Google
                 </a>
               </Button>

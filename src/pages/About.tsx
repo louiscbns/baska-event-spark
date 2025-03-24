@@ -1,8 +1,7 @@
-
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check, ChevronRight, Coffee, HandHeart, Paperclip, Target, Trophy } from "lucide-react";
+import { Check, ChevronRight, Coffee, HandHeart, Paperclip, Target, Trophy, Phone, Mail } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -30,28 +29,24 @@ const About = () => {
 
   const team = [
     {
-      name: "Sophie Dubois",
-      position: "Fondatrice & Directrice",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop",
-      bio: "Avec plus de 15 ans d'expérience dans l'événementiel de luxe, Sophie a fondé Baska Events avec la vision de créer des moments d'exception."
+      name: "Louis Cabanis (CABA)",
+      position: "Co-fondateur & DJ",
+      image: "/public/lovable-uploads/baska-events-equipe-louis.jpg",
+      bio: "Avec plus de 4 ans d'expérience dans l'événementiel, Louis a fondé Baska Events avec la vision de créer des moments d'exception.",
+      contact: {
+        phone: "07 82 49 14 28",
+        email: "louis.cabanis@baska-events.fr"
+      }
     },
     {
-      name: "Marc Laurent",
-      position: "Directeur Artistique",
-      image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&h=500&fit=crop",
-      bio: "Marc transforme les concepts en réalités visuelles époustouflantes, apportant une touche unique à chaque événement."
-    },
-    {
-      name: "Julie Moreau",
-      position: "Responsable Logistique",
-      image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&h=500&fit=crop",
-      bio: "Experte en logistique, Julie s'assure que chaque événement se déroule sans accroc, de la planification à l'exécution."
-    },
-    {
-      name: "Thomas Leclerc",
-      position: "Responsable Commercial",
-      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&h=500&fit=crop",
-      bio: "Thomas comprend parfaitement les besoins des clients et s'assure que chaque projet répond exactement à leurs attentes."
+      name: "Sébastien de la Selle (SEBB)",
+      position: "Co-fondateur & DJ",
+      image: "/public/lovable-uploads/baska-events-equipe-sebastien.jpg",
+      bio: "Passionné par l'événementiel, Sébastien De la Selle met son expertise et sa créativité au service de Baska Events pour orchestrer des expériences inoubliables.",
+      contact: {
+        phone: "06 33 00 84 04",
+        email: "baska.events@gmail.com"
+      }
     }
   ];
 
@@ -102,10 +97,10 @@ const About = () => {
                 subtitle="De l'idée à la réalité, l'histoire de Baska Events."
               />
               <p className="text-foreground mb-4 animate-on-scroll">
-                Fondée en 2015 par Sophie Dubois, Baska Events est née d'une passion pour l'organisation d'événements exceptionnels. Après plus de 10 ans d'expérience dans l'événementiel de luxe à Paris et à l'international, Sophie a décidé de créer sa propre agence avec une vision claire : transformer chaque événement en une expérience inoubliable.
+                Fondée en novembre 2022 par Louis Cabanis et Sébastien de la Selle, Baska Events est née d'une passion commune pour l'événementiel et le mix musical. Issus d'associations de sons & lumières au sein de leurs écoles respectives, ils ont décidé d'unir leurs talents pour apporter leur touche unique à l'univers sonore des professionnels et particuliers. 
               </p>
               <p className="text-foreground mb-4 animate-on-scroll">
-                Le nom "Baska" est inspiré d'un lieu spécial où Sophie a organisé son premier événement majeur, symbolisant l'engagement de l'agence à créer des moments uniques et personnalisés.
+              En moins de deux ans, l'agence a déjà accompagné plus de 100 clients dans la réalisation de leurs événements, transformant chaque projet en une expérience sonore mémorable.
               </p>
               <p className="text-foreground mb-8 animate-on-scroll">
                 Aujourd'hui, Baska Events est reconnue comme une agence de référence dans l'organisation d'événements privés et professionnels, avec une équipe talentueuse et passionnée qui partage la même vision d'excellence.
@@ -147,24 +142,34 @@ const About = () => {
             centered
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {team.map((member, index) => (
               <div 
                 key={index}
-                className="rounded-lg border border-border bg-card shadow-sm overflow-hidden animate-on-scroll"
+                className="rounded-lg border border-border bg-card shadow-sm overflow-hidden animate-on-scroll max-w-xs mx-auto w-full"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-playfair font-semibold mb-1">{member.name}</h3>
                   <p className="text-gold text-sm mb-3">{member.position}</p>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
+                  <p className="text-muted-foreground text-sm mb-4">{member.bio}</p>
+                  <div className="space-y-2">
+                    <a href={`tel:${member.contact.phone}`} className="flex items-center text-sm text-muted-foreground hover:text-gold transition-colors">
+                      <Phone className="h-4 w-4 mr-2" />
+                      {member.contact.phone}
+                    </a>
+                    <a href={`mailto:${member.contact.email}`} className="flex items-center text-sm text-muted-foreground hover:text-gold transition-colors">
+                      <Mail className="h-4 w-4 mr-2" />
+                      {member.contact.email}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -210,19 +215,19 @@ const About = () => {
             <div className="space-y-6 animate-on-scroll">
               {[
                 {
-                  number: "200+",
+                  number: "100+",
                   label: "Événements réussis",
-                  description: "Plus de 200 événements organisés avec succès depuis notre création."
+                  description: "Plus de 100 événements organisés avec succès depuis notre création."
                 },
                 {
-                  number: "95%",
+                  number: "98%",
                   label: "Clients satisfaits",
                   description: "Un taux de satisfaction client exceptionnel, attesté par des avis positifs."
                 },
                 {
-                  number: "15+",
+                  number: "5+",
                   label: "Années d'expérience",
-                  description: "Une expertise cumulée de plus de 15 ans dans l'industrie événementielle."
+                  description: "Une expertise de plus de 5 ans dans l'industrie événementielle."
                 }
               ].map((stat, index) => (
                 <div key={index} className="p-6 rounded-lg border border-border bg-card shadow-sm">
@@ -255,7 +260,7 @@ const About = () => {
               <Button asChild size="lg" className="btn-primary">
                 <Link to="/contact">Nous contacter</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
                 <Link to="/services">Explorer nos services</Link>
               </Button>
             </div>
