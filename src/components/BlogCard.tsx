@@ -1,11 +1,8 @@
 
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
-import { fr } from "date-fns/locale";
 
-interface BlogCardProps {
+export interface BlogCardProps {
   slug: string;
   title: string;
   excerpt: string;
@@ -13,6 +10,7 @@ interface BlogCardProps {
   date: Date;
   category: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const BlogCard = ({
@@ -23,36 +21,44 @@ const BlogCard = ({
   date,
   category,
   className,
+  style,
 }: BlogCardProps) => {
+  const formattedDate = new Intl.DateTimeFormat('fr-FR', { 
+    day: 'numeric', 
+    month: 'long', 
+    year: 'numeric' 
+  }).format(date);
+
   return (
     <Link
       to={`/blog/${slug}`}
       className={cn(
-        "block rounded-lg overflow-hidden border border-border bg-card shadow-sm card-hover animate-on-scroll",
+        "block overflow-hidden rounded-lg shadow-md transition-all card-hover animate-on-scroll",
         className
       )}
+      style={style}
     >
-      <div className="aspect-video overflow-hidden">
+      <div className="aspect-video overflow-hidden relative">
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      </div>
-      <div className="p-6">
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-xs font-medium px-2 py-1 rounded-full bg-secondary text-foreground">
-            {category}
-          </span>
-          <div className="flex items-center text-xs text-muted-foreground">
-            <CalendarIcon className="h-3 w-3 mr-1" />
-            <span>{format(date, "d MMMM yyyy", { locale: fr })}</span>
-          </div>
+        <div className="absolute top-3 left-3 bg-gold/80 text-white text-xs font-medium py-1 px-2 rounded">
+          {category}
         </div>
-        <h3 className="text-xl font-playfair font-semibold mb-2 line-clamp-2 hover:text-gold transition-colors">
+      </div>
+      
+      <div className="p-5 bg-card">
+        <p className="text-sm text-muted-foreground mb-2">
+          {formattedDate}
+        </p>
+        <h3 className="text-xl font-playfair font-semibold mb-2 group-hover:text-gold transition-colors">
           {title}
         </h3>
-        <p className="text-muted-foreground line-clamp-3">{excerpt}</p>
+        <p className="text-muted-foreground text-sm">
+          {excerpt}
+        </p>
       </div>
     </Link>
   );
