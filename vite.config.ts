@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/baska-event-spark/',
+  base: '/',
   server: {
     host: "::",
     port: 8080,
