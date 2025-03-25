@@ -11,63 +11,63 @@ const portfolioItems = [
     id: "mariage-provence",
     title: "Mariage élégant en Provence",
     category: "Mariage",
-    image: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png",
+    image: "/images/types/mariages/mariage-chateau-jardin.webp",
     description: "Un mariage champêtre organisé dans un domaine provençal, avec une décoration florale somptueuse et une ambiance romantique pour 150 invités."
   },
   {
     id: "gala-entreprise",
     title: "Gala annuel d'entreprise",
     category: "Événement d'entreprise",
-    image: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
+    image: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
     description: "Gala de fin d'année pour une entreprise internationale, avec dîner de gala, remise de prix et animation musicale pour 200 collaborateurs."
   },
   {
     id: "anniversaire-surprise",
     title: "Anniversaire surprise 50 ans",
     category: "Anniversaire",
-    image: "/lovable-uploads/tres-grande-tablee.jpeg",
+    image: "/images/types/anniversaires/anniversaire-grande-table-small.webp",
     description: "Organisation complète d'une fête surprise pour un 50ème anniversaire avec thématique années 80, animations personnalisées et menu gastronomique."
   },
   {
     id: "soiree-pool-party",
     title: "Pool Party privée",
     category: "Soirée privée",
-    image: "/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.jpeg",
+    image: "/images/accueil/evenement-piscine-avignon.webp",
     description: "Soirée exclusive autour d'une piscine avec DJ international, cocktails signature et mise en lumière spectaculaire pour 80 invités."
   },
   {
     id: "festival-musique",
     title: "Festival de musique privé",
     category: "Concert & Festival",
-    image: "/lovable-uploads/dj-set-louis-food-society.JPG",
+    image: "/images/types/festival/festival-locomotives.webp",
     description: "Organisation d'un festival privé avec plusieurs artistes, espaces VIP et décoration bohème chic pour 300 personnes."
   },
   {
     id: "gala-charite",
     title: "Gala de charité",
     category: "Événement social",
-    image: "/lovable-uploads/7151d6f0-4ffd-434a-9767-54aca5aae40d.png",
+    image: "/images/types/galas/galas-balle-annuel-officiers-millitaires-small.webp",
     description: "Événement caritatif élégant avec vente aux enchères, dîner gastronomique et spectacle live, ayant permis de récolter des fonds importants pour une association."
   },
   {
     id: "lancement-produit",
     title: "Lancement de produit luxe",
     category: "Événement d'entreprise",
-    image: "/lovable-uploads/f84aac44-a554-4926-9381-0f18a6b84445.png",
+    image: "/images/types/entreprises/entreprises-cocktail-dinatoire-exterieur.webp",
     description: "Événement exclusif pour le lancement d'un produit de luxe, avec scénographie immersive, dégustation et expériences sensorielles pour la presse et les VIP."
   },
   {
     id: "mariage-plage",
     title: "Mariage pieds dans l'eau",
     category: "Mariage",
-    image: "/lovable-uploads/19a40589-f9bd-4a67-a57e-925687b66a40.png",
+    image: "/images/types/mariages/mariage-reception-jardin-chateau.webp",
     description: "Cérémonie et réception de mariage sur une plage privée, avec arche florale, dîner au coucher du soleil et piste de danse sous les étoiles."
   },
   {
     id: "seminaire-entreprise",
     title: "Séminaire d'entreprise",
     category: "Événement d'entreprise",
-    image: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris.jpeg",
+    image: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris.jpeg",
     description: "Organisation d'un séminaire de trois jours pour une entreprise, avec conférences, ateliers team building et soirées thématiques."
   }
 ];
@@ -228,7 +228,7 @@ const Portfolio = () => {
             <div className="relative animate-on-scroll">
               <div className="absolute -top-4 -left-4 w-48 h-48 border-2 border-gold rounded-xl" />
               <img
-                src="/lovable-uploads/baska-events-traiteur-evenementiel.jpg"
+                src="/images/services/service-baska-events-traiteur-evenementiel.jpg"
                 alt="Baska Events - Expertise"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10"
               />

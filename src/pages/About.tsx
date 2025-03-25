@@ -31,7 +31,7 @@ const About = () => {
     {
       name: "Louis Cabanis (CABA)",
       position: "Co-fondateur & DJ",
-      image: "/lovable-uploads/baska-events-equipe-louis.jpg",
+      image: "/images/team/team-baska-events-equipe-louis.jpg",
       bio: "Avec plus de 4 ans d'expérience dans l'événementiel, Louis a fondé Baska Events avec la vision de créer des moments d'exception.",
       contact: {
         phone: "07 82 49 14 28",
@@ -41,7 +41,7 @@ const About = () => {
     {
       name: "Sébastien de la Selle (SEBB)",
       position: "Co-fondateur & DJ",
-      image: "/lovable-uploads/baska-events-equipe-sebastien.jpg",
+      image: "/images/team/team-baska-events-equipe-sebastien.jpg",
       bio: "Passionné par l'événementiel, Sébastien De la Selle met son expertise et sa créativité au service de Baska Events pour orchestrer des expériences inoubliables.",
       contact: {
         phone: "06 33 00 84 04",
@@ -67,13 +67,13 @@ const About = () => {
                 Découvrez l'équipe passionnée qui se cache derrière Baska Events et notre engagement envers l'excellence événementielle.
               </p>
             </div>
-            <div className="relative animate-fade-in">
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-48 h-48 border-2 border-gold rounded-xl" />
               <img
-                src="/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg"
-                alt="Équipe Baska Events"
-                className="w-full h-auto rounded-xl shadow-lg"
+                src="/images/types/club/club-dj-set-annettek-small.webp"
+                alt="Notre équipe"
+                className="w-full h-auto rounded-xl shadow-lg relative z-10"
               />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl border-2 border-gold" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const About = () => {
             <div className="order-2 md:order-1 relative">
               <div className="absolute -bottom-4 -right-4 w-64 h-64 rounded-xl border-2 border-gold animate-on-scroll" />
               <img
-                src="/lovable-uploads/louis-et-sebastien-au-festival-locomotives-normandes.jpg"
+                src="/images/types/festival/festival-locomotives.webp"
                 alt="Notre histoire"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10 animate-on-scroll"
               />

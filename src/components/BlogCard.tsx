@@ -1,8 +1,8 @@
-
-import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
-export interface BlogCardProps {
+interface BlogCardProps {
   slug: string;
   title: string;
   excerpt: string;
@@ -20,45 +20,38 @@ const BlogCard = ({
   imageSrc,
   date,
   category,
-  className,
+  className = "",
   style,
 }: BlogCardProps) => {
-  const formattedDate = new Intl.DateTimeFormat('fr-FR', { 
-    day: 'numeric', 
-    month: 'long', 
-    year: 'numeric' 
-  }).format(date);
-
   return (
     <Link
       to={`/blog/${slug}`}
-      className={cn(
-        "block overflow-hidden rounded-lg shadow-md transition-all card-hover animate-on-scroll",
-        className
-      )}
+      className={`group block rounded-lg overflow-hidden border border-border card-hover ${className}`}
       style={style}
     >
-      <div className="aspect-video overflow-hidden relative">
+      <div className="aspect-video overflow-hidden">
         <img
           src={imageSrc}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          alt={`Image illustrant l'article : ${title}`}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+          width="800"
+          height="450"
         />
-        <div className="absolute top-3 left-3 bg-gold/80 text-white text-xs font-medium py-1 px-2 rounded">
-          {category}
-        </div>
       </div>
-      
-      <div className="p-5 bg-card">
-        <p className="text-sm text-muted-foreground mb-2">
-          {formattedDate}
-        </p>
-        <h3 className="text-xl font-playfair font-semibold mb-2 group-hover:text-gold transition-colors">
+      <div className="p-4">
+        <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary text-foreground mb-2">
+          {category}
+        </span>
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-gold transition-colors line-clamp-2">
           {title}
         </h3>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
           {excerpt}
         </p>
+        <time className="text-xs text-muted-foreground">
+          {format(date, "d MMMM yyyy", { locale: fr })}
+        </time>
       </div>
     </Link>
   );

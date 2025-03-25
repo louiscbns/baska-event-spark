@@ -72,19 +72,19 @@ const portfolioItems = [
   {
     title: "Mariage élégant au Château",
     category: "Mariage",
-    imageSrc: "/lovable-uploads/mariage-jardin-chateau.jpeg",
+    imageSrc: "/images/types/mariages/mariage-chateau-jardin.webp",
     description: "Un mariage somptueux dans un cadre d'exception, alliant élégance et raffinement dans les jardins d'un château."
   },
   {
     title: "Soirée annuelle Otis Paris",
     category: "Événement d'entreprise",
-    imageSrc: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
+    imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
     description: "Une soirée corporate prestigieuse sur la terrasse du stade, mêlant networking et divertissement."
   },
   {
     title: "Soirée au Tennis Club du 16ème",
     category: "Événement privé",
-    imageSrc: "/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg",
+    imageSrc: "/images/types/club/club-food-society-sebastien.webp",
     description: "Un dîner exclusif en extérieur dans le cadre prestigieux du Tennis Club du 16ème arrondissement de Paris."
   }
 ];
@@ -118,7 +118,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.jpeg"
+            src="/images/accueil/evenement-piscine-avignon.webp"
             alt="Baska Events - Organisation d'événements"
             className="w-full h-full object-cover"
           />
@@ -173,7 +173,7 @@ const Home = () => {
             <div className="relative">
               <div className="absolute -top-4 -right-4 w-64 h-64 rounded-xl border-2 border-gold animate-on-scroll" />
               <img
-                src="/lovable-uploads/mariage-jardin-chateau.jpeg"
+                src="/images/services/service-baska-events-traiteur-evenementiel.jpg"
                 alt="Baska Events - À propos"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10 animate-on-scroll"
               />
