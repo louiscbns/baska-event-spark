@@ -118,7 +118,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.png"
+            src="/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.jpeg"
             alt="Baska Events - Organisation d'événements"
             className="w-full h-full object-cover"
           />

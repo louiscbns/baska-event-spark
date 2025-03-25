@@ -32,7 +32,7 @@ const portfolioItems = [
     id: "soiree-pool-party",
     title: "Pool Party privée",
     category: "Soirée privée",
-    image: "/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.png",
+    image: "/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.jpeg",
     description: "Soirée exclusive autour d'une piscine avec DJ international, cocktails signature et mise en lumière spectaculaire pour 80 invités."
   },
   {
