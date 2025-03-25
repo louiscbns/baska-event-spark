@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     headers: {
-      "Content-Type": "application/javascript"
+      "Content-Type": "text/javascript"
     }
   },
   plugins: [
