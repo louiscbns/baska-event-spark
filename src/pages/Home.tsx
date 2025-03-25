@@ -89,23 +89,6 @@ const portfolioItems = [
   }
 ];
 
-const upcomingEvents = [
-  {
-    title: "Workshop Événementiel",
-    date: new Date("2024-06-15"),
-    location: "Paris",
-    description: "Découvrez les dernières tendances en matière d'organisation d'événements.",
-    link: "/blog/workshop-evenementiel"
-  },
-  {
-    title: "Salon du Mariage",
-    date: new Date("2024-09-10"),
-    location: "Lyon",
-    description: "Rencontrez notre équipe et découvrez nos services pour votre mariage de rêve.",
-    link: "/blog/salon-mariage"
-  }
-];
-
 const Home = () => {
   const aboutRef = useIntersectionObserver();
   const servicesRef = useIntersectionObserver();
@@ -266,6 +249,33 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Clients Logos Section */}
+      <section className="py-12 bg-white dark:bg-charcoal-dark">
+        <div className="container-custom">
+          <SectionHeading
+            title="Ils nous font confiance"
+            subtitle="Découvrez les entreprises qui nous font confiance pour leurs événements"
+            centered
+          />
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center mt-12">
+            <img src="/images/clients/otis.png" alt="Otis" className="h-12 w-auto" />
+            <img src="/images/clients/tennis club du 16.png" alt="Tennis Club du 16" className="h-12 w-auto" />
+            <img src="/images/clients/rock-la-casbah.jpg" alt="Rock La Casbah" className="h-12 w-auto" />
+            <img src="/images/clients/pure-trade.jpg" alt="Pure Trade" className="h-12 w-auto" />
+            <img src="/images/clients/nanoxplore.jpg" alt="Nanoxplore" className="h-12 w-auto" />
+            <img src="/images/clients/les-ateliers-gaité.png" alt="Les Ateliers Gaîté" className="h-12 w-auto" />
+            <img src="/images/clients/hippodrome paris longchamp.jpg" alt="Hippodrome Paris Longchamp" className="h-12 w-auto" />
+            <img src="/images/clients/food society.png" alt="Food Society" className="h-12 w-auto" />
+            <img src="/images/clients/doritos.png" alt="Doritos" className="h-12 w-auto" />
+            <img src="/images/clients/Digame.jpg" alt="Digame" className="h-12 w-auto" />
+            <img src="/images/clients/Bar-Arena.png" alt="Bar Arena" className="h-12 w-auto" />
+            <img src="/images/clients/course croisiere edhec.png" alt="Course Croisière EDHEC" className="h-12 w-auto" />
+            <img src="/images/clients/annette k.png" alt="Annette K" className="h-12 w-auto" />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-charcoal-dark text-white">
         <div className="container-custom">
@@ -279,41 +289,6 @@ const Home = () => {
             <Button asChild size="lg" className="btn-primary animate-on-scroll">
               <Link to="/contact">Demander un devis gratuit</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      <section className="py-20 bg-white dark:bg-charcoal-dark">
-        <div className="container-custom">
-          <SectionHeading
-            title="Événements à venir"
-            subtitle="Retrouvez-nous sur ces événements prochains et restez informés de nos activités."
-            centered
-          />
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {upcomingEvents.map((event, index) => (
-              <div key={index} className="flex gap-4 p-6 rounded-lg border border-border bg-card shadow-sm animate-on-scroll">
-                <div className="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-full bg-secondary text-gold">
-                  <CalendarCheck className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-playfair font-semibold mb-1">{event.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    {new Intl.DateTimeFormat('fr-FR', { 
-                      day: 'numeric', 
-                      month: 'long', 
-                      year: 'numeric' 
-                    }).format(event.date)} • {event.location}
-                  </p>
-                  <p className="text-foreground mb-2">{event.description}</p>
-                  <Link to={event.link} className="text-gold hover:text-gold-dark transition-colors font-medium">
-                    En savoir plus
-                  </Link>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
