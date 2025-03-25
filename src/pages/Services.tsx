@@ -47,7 +47,7 @@ const serviceCategories = [
 // Detailed service data
 const serviceDetails = {
   mariages: {
-    image: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png",
+    image: "/lovable-uploads/mariage-chateau-jardin.jpeg",
     title: "Des mariages aussi uniques que votre amour",
     description: "Nous transformons votre vision en une célébration parfaite, reflétant votre personnalité et votre histoire d'amour.",
     features: [
@@ -78,7 +78,7 @@ const serviceDetails = {
     ]
   },
   entreprise: {
-    image: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
+    image: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris.jpeg",
     title: "Des événements professionnels qui marquent",
     description: "Nous concevons des événements d'entreprise stratégiques qui renforcent votre image de marque et atteignent vos objectifs.",
     features: [
@@ -109,7 +109,7 @@ const serviceDetails = {
     ]
   },
   anniversaires: {
-    image: "/lovable-uploads/59f18ff6-a759-4c77-b856-46a643d9d8f4.png",
+    image: "/lovable-uploads/tres-grande-tablee.jpeg",
     title: "Célébrez vos moments spéciaux avec éclat",
     description: "Qu'il s'agisse d'un premier anniversaire ou d'une grande fête pour vos 50 ans, nous créons des célébrations personnalisées et mémorables.",
     features: [
@@ -140,7 +140,7 @@ const serviceDetails = {
     ]
   },
   soirees: {
-    image: "/lovable-uploads/a9827da5-6cf6-4ef6-aa9d-d2b56d50f8df.png",
+    image: "/lovable-uploads/soiree-club-arc-de-triomphe.jpeg",
     title: "Des soirées exclusives dans des lieux d'exception",
     description: "Nous concevons et organisons des soirées privées élégantes, raffinées et inoubliables dans des cadres exceptionnels.",
     features: [
@@ -171,7 +171,7 @@ const serviceDetails = {
     ]
   },
   concerts: {
-    image: "/lovable-uploads/f84aac44-a554-4926-9381-0f18a6b84445.png",
+    image: "/lovable-uploads/louis-et-sebastien-au-festival-locomotives-normandes.jpg",
     title: "Des expériences musicales exceptionnelles",
     description: "De l'organisation de concerts privés aux festivals complets, nous créons des expériences musicales immersives et mémorables.",
     features: [
@@ -202,7 +202,7 @@ const serviceDetails = {
     ]
   },
   sociaux: {
-    image: "/lovable-uploads/7151d6f0-4ffd-434a-9767-54aca5aae40d.png",
+    image: "/lovable-uploads/balle-annuel-officiers-millitaires.jpeg",
     title: "Des événements sociaux qui rassemblent",
     description: "Nous organisons des événements sociaux élégants qui favorisent les rencontres et créent des liens durables.",
     features: [

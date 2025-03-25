@@ -31,7 +31,7 @@ const About = () => {
     {
       name: "Louis Cabanis (CABA)",
       position: "Co-fondateur & DJ",
-      image: "/public/lovable-uploads/baska-events-equipe-louis.jpg",
+      image: "/lovable-uploads/baska-events-equipe-louis.jpg",
       bio: "Avec plus de 4 ans d'expérience dans l'événementiel, Louis a fondé Baska Events avec la vision de créer des moments d'exception.",
       contact: {
         phone: "07 82 49 14 28",
@@ -41,7 +41,7 @@ const About = () => {
     {
       name: "Sébastien de la Selle (SEBB)",
       position: "Co-fondateur & DJ",
-      image: "/public/lovable-uploads/baska-events-equipe-sebastien.jpg",
+      image: "/lovable-uploads/baska-events-equipe-sebastien.jpg",
       bio: "Passionné par l'événementiel, Sébastien De la Selle met son expertise et sa créativité au service de Baska Events pour orchestrer des expériences inoubliables.",
       contact: {
         phone: "06 33 00 84 04",
@@ -69,7 +69,7 @@ const About = () => {
             </div>
             <div className="relative animate-fade-in">
               <img
-                src="/lovable-uploads/19a40589-f9bd-4a67-a57e-925687b66a40.png"
+                src="/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg"
                 alt="Équipe Baska Events"
                 className="w-full h-auto rounded-xl shadow-lg"
               />
@@ -86,7 +86,7 @@ const About = () => {
             <div className="order-2 md:order-1 relative">
               <div className="absolute -bottom-4 -right-4 w-64 h-64 rounded-xl border-2 border-gold animate-on-scroll" />
               <img
-                src="/lovable-uploads/59f18ff6-a759-4c77-b856-46a643d9d8f4.png"
+                src="/lovable-uploads/louis-et-sebastien-au-festival-locomotives-normandes.jpg"
                 alt="Notre histoire"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10 animate-on-scroll"
               />

@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CalendarIcon, User, Clock, Tag, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
@@ -15,15 +14,21 @@ const blogPosts = [
     content: `
       <p>Le monde du mariage est en constante évolution, s'adaptant aux nouvelles préférences des couples et aux influences culturelles. Pour 2024, plusieurs tendances se dessinent déjà, promettant des célébrations à la fois personnalisées, durables et visuellement époustouflantes.</p>
       
+      <img src="/lovable-uploads/mariage-chateau-jardin.jpeg" alt="Mariage élégant dans un château" className="w-full h-auto rounded-xl my-8" />
+      
       <h2>1. La durabilité au cœur des célébrations</h2>
       
       <p>Les mariages éco-responsables continuent de gagner en popularité. Les couples cherchent à réduire l'empreinte écologique de leur grand jour en optant pour des fleurs locales et de saison, des décorations réutilisables ou biodégradables, et des traiteurs proposant des menus biologiques et locaux.</p>
+      
+      <img src="/lovable-uploads/materiel-mariage-interieur.jpeg" alt="Décoration de mariage éco-responsable" className="w-full h-auto rounded-xl my-8" />
       
       <p>Les invitations digitales et les cadeaux d'invités durables (plantes, produits artisanaux locaux) font également partie de cette tendance verte qui ne cesse de croître.</p>
       
       <h2>2. La personnalisation poussée à l'extrême</h2>
       
       <p>Fini le temps des mariages formatés ! En 2024, la personnalisation atteint de nouveaux sommets. Chaque élément du mariage raconte une histoire – celle du couple. Des cocktails signature aux animations sur mesure, en passant par des cérémonies totalement personnalisées, les mariés veulent que leur journée reflète parfaitement leur personnalité et leur histoire d'amour.</p>
+      
+      <img src="/lovable-uploads/mariage-jardin-chateau.jpeg" alt="Mariage personnalisé dans un jardin" className="w-full h-auto rounded-xl my-8" />
       
       <h2>3. Des palettes de couleurs audacieuses</h2>
       
@@ -49,7 +54,7 @@ const blogPosts = [
       
       <p>N'hésitez pas à nous contacter pour discuter de votre projet de mariage et découvrir comment nous pouvons vous aider à créer une célébration mémorable qui vous ressemble.</p>
     `,
-    imageSrc: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png",
+    imageSrc: "/lovable-uploads/mariage-chateau-jardin.jpeg",
     date: new Date("2024-03-15"),
     category: "Mariage",
     author: "Sophie Dubois",
@@ -60,8 +65,36 @@ const blogPosts = [
     title: "Comment organiser un événement d'entreprise à fort impact ?",
     slug: "evenements-entreprise-impact",
     excerpt: "Les clés pour créer un événement corporate mémorable qui renforce votre marque et atteint vos objectifs stratégiques.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
+    content: `
+      <p>L'organisation d'un événement d'entreprise réussi nécessite une planification minutieuse et une approche stratégique. Voici nos conseils d'experts pour créer un événement corporate qui marquera les esprits et atteindra vos objectifs.</p>
+      
+      <img src="/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg" alt="Événement d'entreprise Otis Paris" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>1. Définir des objectifs clairs</h2>
+      
+      <p>Avant toute chose, définissez précisément les objectifs de votre événement. Qu'il s'agisse de renforcer la cohésion d'équipe, de lancer un nouveau produit ou de célébrer des succès, des objectifs clairs guideront toutes vos décisions.</p>
+      
+      <img src="/lovable-uploads/soiree-annuelle-entreprise-otis-paris.jpeg" alt="Soirée d'entreprise réussie" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>2. Choisir le bon lieu</h2>
+      
+      <p>Le choix du lieu est crucial. Il doit non seulement correspondre à l'image de votre entreprise mais aussi être facilement accessible et adapté au format de votre événement.</p>
+      
+      <img src="/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg" alt="Lieu exceptionnel pour événement" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>3. Créer une expérience mémorable</h2>
+      
+      <p>Les événements les plus réussis sont ceux qui créent une expérience unique pour les participants. Animations originales, scénographie travaillée, et moments d'interaction bien pensés sont essentiels.</p>
+      
+      <h2>4. Soigner la communication</h2>
+      
+      <p>Une communication efficace avant, pendant et après l'événement est indispensable. Utilisez tous les canaux à votre disposition pour maximiser l'impact de votre événement.</p>
+      
+      <h2>5. Mesurer le succès</h2>
+      
+      <p>Définissez des indicateurs de performance clés et mesurez-les pour évaluer le succès de votre événement et identifier les points d'amélioration pour vos futurs projets.</p>
+    `,
+    imageSrc: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
     date: new Date("2024-02-28"),
     category: "Événement d'entreprise",
     author: "Marc Laurent",
@@ -72,12 +105,146 @@ const blogPosts = [
     title: "10 lieux exceptionnels pour votre événement dans le Sud de la France",
     slug: "lieux-exceptionnels-sud",
     excerpt: "Notre sélection des plus beaux domaines, châteaux et espaces insolites pour organiser votre événement dans le Sud de la France.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/19a40589-f9bd-4a67-a57e-925687b66a40.png",
+    content: `
+      <p>Le Sud de la France regorge de lieux exceptionnels pour organiser vos événements. Des châteaux historiques aux espaces contemporains, découvrez notre sélection des plus beaux lieux qui donneront un caractère unique à votre célébration.</p>
+      
+      <img src="/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg" alt="Tennis Club du 16ème" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>1. Les clubs prestigieux</h2>
+      
+      <p>Les clubs privés offrent un cadre élégant et exclusif pour vos événements. Avec leurs installations haut de gamme et leur service impeccable, ils garantissent une expérience premium à vos invités.</p>
+      
+      <img src="/lovable-uploads/soiree-club-arc-de-triomphe.jpeg" alt="Club près de l'Arc de Triomphe" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>2. Les châteaux historiques</h2>
+      
+      <p>Les châteaux du Sud de la France offrent un cadre majestueux et chargé d'histoire pour vos événements. Leurs jardins magnifiques et leur architecture remarquable créent une atmosphère unique.</p>
+      
+      <img src="/lovable-uploads/mariage-jardin-chateau.jpeg" alt="Château avec jardin" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>3. Les espaces urbains tendance</h2>
+      
+      <p>Les lieux urbains modernes et tendance offrent un cadre contemporain parfait pour les événements d'entreprise et les soirées branchées.</p>
+    `,
+    imageSrc: "/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg",
     date: new Date("2024-02-10"),
     category: "Lieux",
     author: "Julie Moreau",
     readTime: "10 min"
+  },
+  {
+    id: "eco-responsable-evenements",
+    title: "Organiser un événement éco-responsable : nos conseils pratiques",
+    slug: "eco-responsable-evenements",
+    excerpt: "Comment réduire l'impact environnemental de vos événements tout en créant une expérience mémorable pour vos invités.",
+    content: `
+      <p>L'organisation d'événements éco-responsables est devenue une priorité pour de nombreux clients. Voici nos conseils pour réduire l'impact environnemental de vos événements tout en maintenant leur qualité.</p>
+      
+      <img src="/lovable-uploads/preparation-evenement-Rock-la-casbah.jpeg" alt="Préparation d'un événement éco-responsable" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>1. Choisir des prestataires locaux</h2>
+      
+      <p>Privilégiez les fournisseurs locaux pour réduire l'empreinte carbone liée au transport. Cela soutient également l'économie locale et garantit souvent des produits plus frais et de meilleure qualité.</p>
+      
+      <img src="/lovable-uploads/baska-events-traiteur-evenementiel.jpg" alt="Traiteur local et responsable" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>2. Gérer les déchets efficacement</h2>
+      
+      <p>Mettez en place un système de tri efficace et optez pour des matériaux réutilisables ou biodégradables. La réduction des déchets commence dès la phase de planification.</p>
+      
+      <h2>3. Optimiser l'énergie</h2>
+      
+      <p>Privilégiez les lieux naturellement lumineux et utilisez des équipements à basse consommation. L'éclairage LED et les systèmes de sonorisation modernes consomment moins d'énergie.</p>
+      
+      <h2>4. Favoriser une restauration responsable</h2>
+      
+      <p>Proposez des menus de saison avec des options végétariennes et travaillez avec des traiteurs engagés dans une démarche durable.</p>
+      
+      <h2>5. Communiquer de manière éco-responsable</h2>
+      
+      <p>Privilégiez la communication digitale et, si nécessaire, utilisez des supports imprimés sur du papier recyclé avec des encres végétales.</p>
+    `,
+    imageSrc: "/lovable-uploads/preparation-evenement-Rock-la-casbah.jpeg",
+    date: new Date("2024-01-25"),
+    category: "Conseils",
+    author: "Sophie Dubois",
+    readTime: "7 min"
+  },
+  {
+    id: "musique-soiree-reussie",
+    title: "L'importance de la musique pour une soirée réussie",
+    slug: "musique-soiree-reussie",
+    excerpt: "Comment choisir la bonne ambiance musicale et les meilleurs prestataires pour créer l'atmosphère parfaite lors de votre événement.",
+    content: `
+      <p>La musique est un élément crucial pour la réussite de tout événement. Elle crée l'ambiance, rythme la soirée et contribue grandement à l'expérience des invités.</p>
+      
+      <img src="/lovable-uploads/dj-set-louis-food-society.JPG" alt="DJ Set à Food Society" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>1. L'importance du DJ</h2>
+      
+      <p>Un bon DJ ne se contente pas de passer des morceaux, il lit la foule, adapte sa programmation et crée une progression musicale qui maintient l'énergie tout au long de la soirée.</p>
+      
+      <img src="/lovable-uploads/dj-set-AnnetteK-Paris.jpg" alt="DJ Set professionnel" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>2. La programmation musicale</h2>
+      
+      <p>Une programmation réussie mélange les styles et les époques tout en restant cohérente avec le type d'événement et le public présent.</p>
+      
+      <h2>3. L'équipement technique</h2>
+      
+      <p>La qualité du son est primordiale. Un système audio professionnel bien calibré permet une diffusion claire et équilibrée dans tout l'espace.</p>
+      
+      <h2>4. L'animation de soirée</h2>
+      
+      <p>Au-delà de la musique, le DJ peut jouer un rôle d'animateur, en interagissant avec le public et en coordonnant les moments clés de la soirée.</p>
+      
+      <h2>5. Les moments forts</h2>
+      
+      <p>Certains moments nécessitent une attention particulière : l'ouverture de bal pour un mariage, les discours pour une soirée d'entreprise, ou encore le moment du gâteau pour un anniversaire.</p>
+    `,
+    imageSrc: "/lovable-uploads/dj-set-louis-food-society.JPG",
+    date: new Date("2024-01-12"),
+    category: "Entertainment",
+    author: "Thomas Leclerc",
+    readTime: "6 min"
+  },
+  {
+    id: "gastronomie-evenementielle",
+    title: "Les dernières tendances en gastronomie événementielle",
+    slug: "gastronomie-evenementielle",
+    excerpt: "Un tour d'horizon des innovations culinaires et des concepts food & beverage qui font sensation dans le monde de l'événementiel.",
+    content: `
+      <p>La gastronomie événementielle évolue constamment, avec de nouvelles tendances qui émergent pour satisfaire les palais les plus exigeants et créer des expériences culinaires mémorables.</p>
+      
+      <img src="/lovable-uploads/baska-events-traiteur-evenementiel.jpg" alt="Service traiteur événementiel" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>1. Les food stations interactives</h2>
+      
+      <p>Les buffets traditionnels laissent place à des stations culinaires interactives où les chefs préparent les plats devant les invités, créant ainsi une expérience immersive.</p>
+      
+      <img src="/lovable-uploads/tres-grande-tablee.jpeg" alt="Grande tablée événementielle" className="w-full h-auto rounded-xl my-8" />
+      
+      <h2>2. La cuisine fusion</h2>
+      
+      <p>Le mélange des cultures culinaires permet de créer des menus originaux et surprenants qui reflètent la diversité gastronomique mondiale.</p>
+      
+      <h2>3. Le locavore et le bio</h2>
+      
+      <p>L'utilisation de produits locaux et biologiques n'est plus une option mais une nécessité pour répondre aux attentes des clients soucieux de l'environnement.</p>
+      
+      <h2>4. Les cocktails signature</h2>
+      
+      <p>Les bars à cocktails personnalisés et les mixologistes créent des boissons sur mesure qui s'accordent parfaitement avec le thème de l'événement.</p>
+      
+      <h2>5. Les alternatives alimentaires</h2>
+      
+      <p>Les options végétariennes, véganes et sans allergènes sont désormais intégrées naturellement dans les menus pour satisfaire tous les régimes alimentaires.</p>
+    `,
+    imageSrc: "/lovable-uploads/baska-events-traiteur-evenementiel.jpg",
+    date: new Date("2023-12-18"),
+    category: "Gastronomie",
+    author: "Julie Moreau",
+    readTime: "8 min"
   }
 ];
 

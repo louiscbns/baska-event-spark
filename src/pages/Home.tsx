@@ -50,19 +50,19 @@ const services = [
 const testimonials = [
   {
     quote: "Baska Events a transformé notre mariage en un événement magique. Chaque détail était parfait et nos invités en parlent encore!",
-    author: "Sophie & Thomas",
+    author: "S & T",
     position: "Mariage à Saint-Tropez",
     rating: 5 as const
   },
   {
     quote: "Notre séminaire d'entreprise a été un véritable succès grâce à Baska Events. Organisation impeccable et réactivité exemplaire.",
-    author: "Jean-Marc Dupont",
-    position: "Directeur Marketing, TechFuture",
+    author: "J-M D",
+    position: "Directeur Marketing",
     rating: 5 as const
   },
   {
     quote: "La fête d'anniversaire organisée pour mes 40 ans était exactement ce que j'avais imaginé. Je recommande vivement!",
-    author: "Claire Martin",
+    author: "C M",
     position: "Anniversaire 40 ans",
     rating: 5 as const
   }
@@ -70,22 +70,22 @@ const testimonials = [
 
 const portfolioItems = [
   {
-    title: "Mariage élégant en Provence",
+    title: "Mariage élégant au Château",
     category: "Mariage",
-    imageSrc: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png",
-    description: "Un mariage champêtre dans un domaine provençal, avec une décoration florale somptueuse et une ambiance romantique."
+    imageSrc: "/lovable-uploads/mariage-jardin-chateau.jpeg",
+    description: "Un mariage somptueux dans un cadre d'exception, alliant élégance et raffinement dans les jardins d'un château."
   },
   {
-    title: "Soirée corporate à Paris",
+    title: "Soirée annuelle Otis Paris",
     category: "Événement d'entreprise",
-    imageSrc: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
-    description: "Lancement de produit pour une entreprise de luxe dans un lieu d'exception à Paris, avec cocktail dînatoire et animation musicale."
+    imageSrc: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
+    description: "Une soirée corporate prestigieuse sur la terrasse du stade, mêlant networking et divertissement."
   },
   {
-    title: "Festival privé au bord de mer",
-    category: "Concert",
-    imageSrc: "/lovable-uploads/a9827da5-6cf6-4ef6-aa9d-d2b56d50f8df.png",
-    description: "Un festival privé sur une plage exclusive avec plusieurs artistes, espaces VIP et décoration bohème chic."
+    title: "Soirée au Tennis Club du 16ème",
+    category: "Événement privé",
+    imageSrc: "/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg",
+    description: "Un dîner exclusif en extérieur dans le cadre prestigieux du Tennis Club du 16ème arrondissement de Paris."
   }
 ];
 
@@ -118,7 +118,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/lovable-uploads/f84aac44-a554-4926-9381-0f18a6b84445.png"
+            src="/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.png"
             alt="Baska Events - Organisation d'événements"
             className="w-full h-full object-cover"
           />
@@ -173,7 +173,7 @@ const Home = () => {
             <div className="relative">
               <div className="absolute -top-4 -right-4 w-64 h-64 rounded-xl border-2 border-gold animate-on-scroll" />
               <img
-                src="/lovable-uploads/7151d6f0-4ffd-434a-9767-54aca5aae40d.png"
+                src="/lovable-uploads/mariage-jardin-chateau.jpeg"
                 alt="Baska Events - À propos"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10 animate-on-scroll"
               />

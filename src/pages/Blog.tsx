@@ -1,4 +1,3 @@
-
 import SectionHeading from "@/components/SectionHeading";
 import BlogCard from "@/components/BlogCard";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,7 @@ const blogPosts = [
     slug: "tendances-mariage-2024",
     excerpt: "Découvrez les tendances qui marqueront les mariages en 2024, de la décoration aux animations, pour un jour J parfaitement dans l'air du temps.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png",
+    imageSrc: "/lovable-uploads/mariage-jardin-chateau.jpeg",
     date: new Date("2024-03-15"),
     category: "Mariage",
     author: "Sophie Dubois"
@@ -25,7 +24,7 @@ const blogPosts = [
     slug: "evenements-entreprise-impact",
     excerpt: "Les clés pour créer un événement corporate mémorable qui renforce votre marque et atteint vos objectifs stratégiques.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
+    imageSrc: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
     date: new Date("2024-02-28"),
     category: "Événement d'entreprise",
     author: "Marc Laurent"
@@ -36,7 +35,7 @@ const blogPosts = [
     slug: "lieux-exceptionnels-sud",
     excerpt: "Notre sélection des plus beaux domaines, châteaux et espaces insolites pour organiser votre événement dans le Sud de la France.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/19a40589-f9bd-4a67-a57e-925687b66a40.png",
+    imageSrc: "/lovable-uploads/soiree-exte-tennis-club-du-16e.jpeg",
     date: new Date("2024-02-10"),
     category: "Lieux",
     author: "Julie Moreau"
@@ -47,7 +46,7 @@ const blogPosts = [
     slug: "eco-responsable-evenements",
     excerpt: "Comment réduire l'impact environnemental de vos événements tout en créant une expérience mémorable pour vos invités.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/7151d6f0-4ffd-434a-9767-54aca5aae40d.png",
+    imageSrc: "/lovable-uploads/preparation-evenement-Rock-la-casbah.jpeg",
     date: new Date("2024-01-25"),
     category: "Conseils",
     author: "Sophie Dubois"
@@ -58,7 +57,7 @@ const blogPosts = [
     slug: "musique-soiree-reussie",
     excerpt: "Comment choisir la bonne ambiance musicale et les meilleurs prestataires pour créer l'atmosphère parfaite lors de votre événement.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/a9827da5-6cf6-4ef6-aa9d-d2b56d50f8df.png",
+    imageSrc: "/lovable-uploads/dj-set-louis-food-society.JPG",
     date: new Date("2024-01-12"),
     category: "Entertainment",
     author: "Thomas Leclerc"
@@ -69,7 +68,7 @@ const blogPosts = [
     slug: "gastronomie-evenementielle",
     excerpt: "Un tour d'horizon des innovations culinaires et des concepts food & beverage qui font sensation dans le monde de l'événementiel.",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl. Nullam euismod, nisl eget aliquam ultricies, nisl nisl aliquam nisl, vitae aliquam nisl nisl eget nisl.",
-    imageSrc: "/lovable-uploads/8dd008a3-e1e1-4059-888b-c94f73dd939c.png",
+    imageSrc: "/lovable-uploads/baska-events-traiteur-evenementiel.jpg",
     date: new Date("2023-12-18"),
     category: "Gastronomie",
     author: "Julie Moreau"

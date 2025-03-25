@@ -1,4 +1,3 @@
-
 import SectionHeading from "@/components/SectionHeading";
 import PortfolioItem from "@/components/PortfolioItem";
 import { Button } from "@/components/ui/button";
@@ -19,29 +18,29 @@ const portfolioItems = [
     id: "gala-entreprise",
     title: "Gala annuel d'entreprise",
     category: "Événement d'entreprise",
-    image: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
+    image: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
     description: "Gala de fin d'année pour une entreprise internationale, avec dîner de gala, remise de prix et animation musicale pour 200 collaborateurs."
   },
   {
     id: "anniversaire-surprise",
     title: "Anniversaire surprise 50 ans",
     category: "Anniversaire",
-    image: "/lovable-uploads/59f18ff6-a759-4c77-b856-46a643d9d8f4.png",
+    image: "/lovable-uploads/tres-grande-tablee.jpeg",
     description: "Organisation complète d'une fête surprise pour un 50ème anniversaire avec thématique années 80, animations personnalisées et menu gastronomique."
   },
   {
     id: "soiree-pool-party",
     title: "Pool Party privée",
     category: "Soirée privée",
-    image: "/lovable-uploads/8dd008a3-e1e1-4059-888b-c94f73dd939c.png",
+    image: "/lovable-uploads/soiree-exterieure-piscine-sud-de-la-france-avignon.png",
     description: "Soirée exclusive autour d'une piscine avec DJ international, cocktails signature et mise en lumière spectaculaire pour 80 invités."
   },
   {
     id: "festival-musique",
     title: "Festival de musique privé",
     category: "Concert & Festival",
-    image: "/lovable-uploads/a9827da5-6cf6-4ef6-aa9d-d2b56d50f8df.png",
-    description: "Organisation d'un festival privé sur une plage exclusive avec plusieurs artistes, espaces VIP et décoration bohème chic pour 300 personnes."
+    image: "/lovable-uploads/dj-set-louis-food-society.JPG",
+    description: "Organisation d'un festival privé avec plusieurs artistes, espaces VIP et décoration bohème chic pour 300 personnes."
   },
   {
     id: "gala-charite",
@@ -68,7 +67,7 @@ const portfolioItems = [
     id: "seminaire-entreprise",
     title: "Séminaire d'entreprise",
     category: "Événement d'entreprise",
-    image: "/lovable-uploads/2b6347ae-2c8d-4535-98c4-f53e391fbdc4.png",
+    image: "/lovable-uploads/soiree-annuelle-entreprise-otis-paris.jpeg",
     description: "Organisation d'un séminaire de trois jours pour une entreprise, avec conférences, ateliers team building et soirées thématiques."
   }
 ];
@@ -229,7 +228,7 @@ const Portfolio = () => {
             <div className="relative animate-on-scroll">
               <div className="absolute -top-4 -left-4 w-48 h-48 border-2 border-gold rounded-xl" />
               <img
-                src="/lovable-uploads/59f18ff6-a759-4c77-b856-46a643d9d8f4.png"
+                src="/lovable-uploads/baska-events-traiteur-evenementiel.jpg"
                 alt="Baska Events - Expertise"
                 className="w-full h-auto rounded-xl shadow-lg relative z-10"
               />
