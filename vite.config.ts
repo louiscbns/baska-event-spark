@@ -10,10 +10,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     headers: {
-      "Content-Type": "application/javascript",
-      "X-Content-Type-Options": "nosniff"
-    },
-    middlewareMode: false
+      "Content-Type": "application/javascript"
+    }
   },
   plugins: [
     react(),
