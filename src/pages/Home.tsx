@@ -84,7 +84,7 @@ const portfolioItems = [
   {
     title: "Soirée au Tennis Club du 16ème",
     category: "Événement privé",
-    imageSrc: "/images/types/club/club-food-society-sebastien.webp",
+    imageSrc: "/images/types/tennis-club/tennis-club-soiree-exte-tennis-club-du-16e-small.webp",
     description: "Un dîner exclusif en extérieur dans le cadre prestigieux du Tennis Club du 16ème arrondissement de Paris."
   }
 ];

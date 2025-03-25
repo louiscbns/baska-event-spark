@@ -1,4 +1,3 @@
-
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
@@ -108,7 +107,7 @@ const featuredTestimonial = {
   author: "E. & L. D",
   position: "Mariage au Château de Versailles",
   rating: 5 as const,
-  image: "/lovable-uploads/761ee18b-fa87-46a1-89a1-5fec3248fa2b.png"
+  image: "/images/types/mariages/mariage-chateau-jardin.webp"
 };
 
 const Testimonials = () => {
@@ -218,7 +217,7 @@ const Testimonials = () => {
             <div className="aspect-video w-full max-w-4xl bg-muted rounded-xl shadow-lg">
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/19a40589-f9bd-4a67-a57e-925687b66a40.png"
+                  src="/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg"
                   alt="Témoignage vidéo"
                   className="w-full h-full object-cover"
                 />

@@ -234,30 +234,6 @@ const serviceDetails = {
   }
 };
 
-// Our approach steps
-const approachSteps = [
-  {
-    icon: UserRound,
-    title: "1. Consultation personnalisée",
-    description: "Nous commençons par comprendre votre vision, vos objectifs et vos attentes pour créer un événement qui vous ressemble."
-  },
-  {
-    icon: Sparkles,
-    title: "2. Conception créative",
-    description: "Notre équipe développe un concept unique et sur mesure qui reflète votre personnalité ou l'image de votre entreprise."
-  },
-  {
-    icon: CheckCircle,
-    title: "3. Planification détaillée",
-    description: "Nous élaborons un plan précis, sélectionnons les meilleurs fournisseurs et gérons tous les aspects logistiques."
-  },
-  {
-    icon: Calendar,
-    title: "4. Exécution impeccable",
-    description: "Le jour J, notre équipe assure une coordination parfaite pour que vous puissiez profiter pleinement de votre événement."
-  }
-];
-
 const Services = () => {
   return (
     <>
@@ -282,71 +258,6 @@ const Services = () => {
                 <Link to="/realisations">Voir nos réalisations</Link>
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Categories Section */}
-      <section className="py-20 bg-white dark:bg-charcoal-dark relative">
-        <div className="container-custom">
-          <SectionHeading
-            title="Nos domaines d'expertise"
-            subtitle="Découvrez notre large gamme de services événementiels personnalisés."
-            centered
-          />
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((category, index) => (
-              <a
-                key={category.id}
-                href={`#${category.id}`}
-                className="p-6 rounded-lg border border-border bg-card shadow-sm card-hover animate-on-scroll"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center bg-secondary text-gold">
-                  <category.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-playfair font-semibold mb-2">{category.title}</h3>
-                <p className="text-muted-foreground">{category.description}</p>
-              </a>
-            ))}
-          </div>
-          
-          <div className="flex justify-center mt-12">
-            <a
-              href="#services-details"
-              className="flex flex-col items-center text-muted-foreground hover:text-gold transition-colors animate-on-scroll"
-            >
-              <span className="mb-2">Découvrir en détail</span>
-              <ChevronsDown className="h-6 w-6 animate-bounce" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
-      <section className="py-20 bg-secondary/50 dark:bg-charcoal">
-        <div className="container-custom">
-          <SectionHeading
-            title="Notre approche"
-            subtitle="Une méthodologie éprouvée pour des événements réussis."
-            centered
-          />
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {approachSteps.map((step, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-lg border border-border bg-card shadow-sm animate-on-scroll"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center bg-gold text-white">
-                  <step.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-playfair font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
