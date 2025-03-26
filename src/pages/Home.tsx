@@ -122,7 +122,9 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">Demander un devis</Link>
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
                 <Link to="/services">Découvrir nos services</Link>
@@ -272,6 +274,7 @@ const Home = () => {
             <img src="/images/clients/Bar-Arena.png" alt="Bar Arena" className="h-12 w-auto" />
             <img src="/images/clients/course croisiere edhec.png" alt="Course Croisière EDHEC" className="h-12 w-auto" />
             <img src="/images/clients/annette k.png" alt="Annette K" className="h-12 w-auto" />
+            <img src="/images/clients/logo-asso-boule_dassas.png" alt="La boule d'assas" className="h-12 w-auto" />
           </div>
         </div>
       </section>
@@ -286,9 +289,13 @@ const Home = () => {
             <p className="section-paragraph mx-auto mb-8 text-white/80 animate-on-scroll">
               Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé. Notre équipe est impatiente de vous aider à créer un événement mémorable.
             </p>
-            <Button asChild size="lg" className="btn-primary animate-on-scroll">
-              <Link to="/contact">Demander un devis gratuit</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+              <Button asChild size="lg" className="btn-primary">
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

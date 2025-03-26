@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,6 +17,7 @@ import BlogPost from "./pages/BlogPost";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import DjParis from "./pages/DjParis";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +37,7 @@ const App = () => (
             <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="temoignages" element={<Testimonials />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="dj-paris" element={<DjParis />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

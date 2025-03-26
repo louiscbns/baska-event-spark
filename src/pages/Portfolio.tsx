@@ -3,6 +3,13 @@ import PortfolioItem from "@/components/PortfolioItem";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useState } from "react";
 
 // Portfolio items
@@ -107,9 +114,25 @@ const Portfolio = () => {
       {/* Portfolio Grid Section */}
       <section className="py-20 bg-white dark:bg-charcoal-dark">
         <div className="container-custom">
-          <Tabs defaultValue="all" value={filter} onValueChange={setFilter} className="animate-on-scroll">
+          <div className="md:hidden mb-8">
+            <Select value={filter} onValueChange={setFilter}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Filtrer par catégorie" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Tous</SelectItem>
+                {categories.map((category) => (
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <Tabs value={filter} onValueChange={setFilter} className="animate-on-scroll">
             <div className="flex justify-center mb-10">
-              <TabsList>
+              <TabsList className="hidden md:flex">
                 <TabsTrigger value="all">Tous</TabsTrigger>
                 {categories.map((category) => (
                   <TabsTrigger key={category} value={category}>
@@ -219,8 +242,10 @@ const Portfolio = () => {
               </div>
               
               <div className="mt-8 animate-on-scroll">
-                <Button asChild className="btn-primary">
-                  <Link to="/contact">Discuter de votre projet</Link>
+                <Button asChild size="lg" className="btn-primary">
+                  <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                    Discuter de votre projet
+                  </a>
                 </Button>
               </div>
             </div>
@@ -249,10 +274,9 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">Nous contacter</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
-                <Link to="/services">Explorer nos services</Link>
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
               </Button>
             </div>
           </div>

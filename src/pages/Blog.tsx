@@ -6,7 +6,13 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { blogPosts } from "@/data/blogPosts";
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 // Get unique categories
 const categories = Array.from(
@@ -77,8 +83,26 @@ const Blog = () => {
                   </div>
                 </div>
                 
-                {/* Categories */}
-                <div>
+                {/* Categories - Mobile */}
+                <div className="lg:hidden">
+                  <h3 className="text-lg font-semibold mb-4">Catégories</h3>
+                  <Select value={activeCategory} onValueChange={setActiveCategory}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Sélectionner une catégorie" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Tous">Tous les articles</SelectItem>
+                      {categories.map((category) => (
+                        <SelectItem key={category} value={category}>
+                          {category}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Categories - Desktop */}
+                <div className="hidden lg:block">
                   <h3 className="text-lg font-semibold mb-4">Catégories</h3>
                   <ul className="space-y-2">
                     <li>
@@ -211,9 +235,13 @@ const Blog = () => {
             <p className="section-paragraph mx-auto mb-8 text-white/80 animate-on-scroll">
               Contactez-nous dès aujourd'hui pour transformer vos inspirations en un événement exceptionnel.
             </p>
-            <Button asChild size="lg" className="btn-primary animate-on-scroll">
-              <a href="/contact">Nous contacter</a>
-            </Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+              <Button asChild size="lg" className="btn-primary">
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

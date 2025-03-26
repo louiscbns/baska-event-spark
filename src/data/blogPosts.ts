@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour discuter de votre projet de mariage à Paris. Notre expertise en organisation d'événements de luxe et notre connaissance approfondie des tendances actuelles vous garantiront une célébration exceptionnelle qui vous ressemble.</p>
       `,
-      imageSrc: "/images/types/mariages/mariage-mains-fiances.webp",
+      imageSrc: "/images/types/mariages/mariage-chateau-jardin.webp",
       date: new Date("2024-03-15"),
       category: "Mariages",
       author: "Sophie Dubois",
@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour discuter de votre projet d'événement d'entreprise à Paris. Notre équipe d'experts en événementiel corporate vous accompagnera dans la création d'événements mémorables qui renforcent votre image de marque et atteignent vos objectifs stratégiques.</p>
       `,
-      imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade-small.webp",
+      imageSrc: "/images/types/entreprises/entreprises-soiree-entreprise-exterieur.png",
       date: new Date("2024-02-28"),
       category: "Entreprise",
       author: "Marc Laurent",
@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour discuter de votre projet de soirée d'entreprise à Paris. Notre équipe vous guidera dans le choix du DJ idéal pour créer un événement corporate mémorable.</p>
       `,
-      imageSrc: "/images/types/club/club-dj-set-annettek-small.webp",
+      imageSrc: "/images/types/club/club-food-society-sebastien-small.webp",
       date: new Date("2024-03-20"),
       category: "Animation",
       author: "Thomas Leclerc",
@@ -270,7 +270,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour découvrir notre sélection de lieux d'exception pour votre gala d'entreprise à Paris. Notre équipe vous guidera dans le choix de l'espace idéal.</p>
       `,
-      imageSrc: "/images/types/entreprises/entreprises-soiree-d-entreprise-small.webp",
+      imageSrc: "/images/types/entreprises/entreprises-soiree-d-entreprise.jpeg",
       date: new Date("2024-03-05"),
       category: "Lieux",
       author: "Julie Moreau",
@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour découvrir comment nous pouvons transformer vos idées en événements mémorables. Notre équipe d'experts vous accompagnera dans la réalisation de vos projets événementiels à Paris.</p>
       `,
-      imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade-small.webp",
+      imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris.jpeg",
       date: new Date("2024-03-03"),
       category: "Conseils",
       author: "Sophie Dubois",
@@ -328,7 +328,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour découvrir comment nous pouvons intégrer ces tendances 2024 dans votre prochain événement corporate à Paris. Notre équipe d'experts vous accompagnera dans la création d'un événement exceptionnel.</p>
       `,
-      imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-small.webp",
+      imageSrc: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
       date: new Date("2024-02-20"),
       category: "Événement d'entreprise",
       author: "Sophie Dubois",
@@ -358,7 +358,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>N'hésitez pas à nous contacter pour découvrir comment nous pouvons intégrer ces tendances 2024 dans votre prochain mariage à Paris. Notre équipe d'experts vous accompagnera dans la création d'une célébration exceptionnelle.</p>
       `,
-      imageSrc: "/images/types/mariages/mariage-mains-fiances.webp",
+      imageSrc: "/images/types/mariages/mariage-reception-jardin-chateau.webp",
       date: new Date("2024-02-15"),
       category: "Mariage",
       author: "Marie Laurent",
@@ -384,11 +384,11 @@ export const blogPosts: BlogPost[] = [
 
         <p>Pour créer un événement de luxe inoubliable à Paris en 2025, faites confiance à notre savoir-faire en événementiel haut de gamme. Contactez Baska Events pour découvrir comment nous pouvons transformer votre vision en une célébration exceptionnelle. Notre équipe d'experts vous accompagnera dans la création d'un événement luxueux qui établira de nouveaux standards d'excellence.</p>
       `,
-      imageSrc: "/images/accueil/anniversaire-soiree-club-arc-de-triomphe-luxe.jpeg",
-      date: new Date("2024-02-05"),
-      category: "Événement d'entreprise",
-      author: "Marc Laurent",
-      readTime: "8 min"
+      imageSrc: "/images/types/mariages/mariage-chateau-jardin.jpeg",
+      date: new Date("2024-02-08"),
+      category: "Événement de luxe",
+      author: "Sophie Dubois",
+      readTime: "7 min"
     },
     {
       id: "meilleurs-djs-mariage-paris-2025",
@@ -924,7 +924,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>Pour créer un événement d'entreprise mémorable à Paris en 2025, faites confiance à notre expertise en animation musicale corporate. Contactez Baska Events pour découvrir notre sélection de DJs professionnels et bénéficier de conseils personnalisés. Notre équipe vous accompagnera dans la création d'un événement d'entreprise qui marquera positivement les esprits de vos collaborateurs et partenaires.</p>
       `,
-      imageSrc: "/images/types/club/club-dj-set-annettek-small.webp",
+      imageSrc: "/images/types/club/club-food-society-sebastien.jpeg",
       date: new Date("2024-03-19"),
       category: "Animation",
       author: "Thomas Leclerc",
@@ -950,7 +950,7 @@ export const blogPosts: BlogPost[] = [
 
         <p>Pour créer un mariage mémorable à Paris en 2025, faites confiance à notre expertise en animation musicale haut de gamme. Contactez Baska Events pour découvrir notre sélection de DJs d'exception et bénéficier de conseils personnalisés. Notre équipe vous accompagnera dans la création d'une célébration unique qui restera gravée dans les mémoires de tous vos invités.</p>
       `,
-      imageSrc: "/images/types/club/club-dj-set-annettek-small.webp",
+      imageSrc: "/images/types/club/club-dj-set-annettek.jpg",
       date: new Date("2024-03-17"),
       category: "Animation",
       author: "Thomas Leclerc",

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -12,11 +11,11 @@ const Header = () => {
 
   const navLinks = [
     { name: "Accueil", path: "/" },
-    { name: "À propos", path: "/a-propos" },
     { name: "Services", path: "/services" },
     { name: "Réalisations", path: "/realisations" },
-    { name: "Blog", path: "/blog" },
     { name: "Témoignages", path: "/temoignages" },
+    { name: "À propos", path: "/a-propos" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -74,7 +73,9 @@ const Header = () => {
         {/* CTA Button (Desktop) */}
         <div className="hidden md:block">
           <Button asChild className="btn-primary">
-            <Link to="/contact">Demander un devis</Link>
+            <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+              Discuter de votre projet
+            </a>
           </Button>
         </div>
 
@@ -112,7 +113,9 @@ const Header = () => {
             ))}
             <div className="px-4 py-4">
               <Button asChild className="btn-primary w-full">
-                <Link to="/contact">Demander un devis</Link>
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
               </Button>
             </div>
           </div>

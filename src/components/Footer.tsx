@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NewsletterForm from "./NewsletterForm";
 
@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal-dark text-white pt-16 pb-8">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Column 1: About */}
-          <div>
+          <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <h3 className="text-2xl font-playfair font-bold">
                 <span className="text-gold">Baska</span> Events
@@ -74,11 +74,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/a-propos" className="text-gray-300 hover:text-gold transition-colors">
-                  À propos
-                </Link>
-              </li>
-              <li>
                 <Link to="/services" className="text-gray-300 hover:text-gold transition-colors">
                   Services
                 </Link>
@@ -89,13 +84,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-gold transition-colors">
-                  Blog
+                <Link to="/temoignages" className="text-gray-300 hover:text-gold transition-colors">
+                  Témoignages
                 </Link>
               </li>
               <li>
-                <Link to="/temoignages" className="text-gray-300 hover:text-gold transition-colors">
-                  Témoignages
+                <Link to="/a-propos" className="text-gray-300 hover:text-gold transition-colors">
+                  À propos
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-gold transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
@@ -106,7 +106,39 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* Column 3: Services DJ */}
+          <div>
+            <h4 className="text-lg font-bold mb-4">Services DJ</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/dj-paris" className="text-gray-300 hover:text-gold transition-colors">
+                  DJ à Paris
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#mariages" className="text-gray-300 hover:text-gold transition-colors">
+                  DJ pour mariages
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#entreprise" className="text-gray-300 hover:text-gold transition-colors">
+                  DJ pour entreprises
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#soirees" className="text-gray-300 hover:text-gold transition-colors">
+                  DJ pour soirées privées
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#anniversaires" className="text-gray-300 hover:text-gold transition-colors">
+                  DJ pour anniversaires
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact */}
           <div>
             <h4 className="text-lg font-bold mb-4">Contact</h4>
             <ul className="space-y-3">
@@ -131,7 +163,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Newsletter */}
+          {/* Column 5: Newsletter */}
           <div>
             <h4 className="text-lg font-bold mb-4">Newsletter</h4>
             <p className="text-gray-300 text-sm mb-4">

@@ -281,9 +281,13 @@ const BlogPost = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Notre équipe d'experts est là pour vous accompagner dans la création de votre événement sur mesure.
                   </p>
-                  <Button asChild className="w-full btn-primary">
-                    <Link to="/contact">Nous contacter</Link>
-                  </Button>
+                  <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+                    <Button asChild size="lg" className="btn-primary">
+                      <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                        Discuter de votre projet
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -302,7 +306,9 @@ const BlogPost = () => {
               Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider.
             </p>
             <Button asChild size="lg" className="btn-primary animate-on-scroll">
-              <Link to="/contact">Demander un devis</Link>
+              <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                Réserver un appel
+              </a>
             </Button>
           </div>
         </div>

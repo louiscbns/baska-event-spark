@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Heart, Star, Users, Laptop, Gift, GlassWater } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useState } from "react";
 
 // Testimonials data
 const testimonials = [
@@ -111,6 +119,8 @@ const featuredTestimonial = {
 };
 
 const Testimonials = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Mariage");
+
   return (
     <>
       {/* Hero Section */}
@@ -171,9 +181,30 @@ const Testimonials = () => {
             centered
           />
           
-          <Tabs defaultValue="Mariage" className="animate-on-scroll">
+          <div className="md:hidden mb-8">
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Sélectionner une catégorie" />
+              </SelectTrigger>
+              <SelectContent>
+                {testimonials.map((category) => (
+                  <SelectItem key={category.category} value={category.category}>
+                    <div className="flex items-center gap-2">
+                      {category.category === "Mariage" && <Heart className="h-4 w-4" />}
+                      {category.category === "Événement d'entreprise" && <Laptop className="h-4 w-4" />}
+                      {category.category === "Anniversaire" && <Gift className="h-4 w-4" />}
+                      {category.category === "Soirée privée" && <GlassWater className="h-4 w-4" />}
+                      <span>{category.category}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="animate-on-scroll">
             <div className="flex justify-center mb-10">
-              <TabsList>
+              <TabsList className="hidden md:flex">
                 {testimonials.map((category) => (
                   <TabsTrigger key={category.category} value={category.category} className="flex items-center gap-2">
                     {category.category === "Mariage" && <Heart className="h-4 w-4" />}
@@ -263,7 +294,9 @@ const Testimonials = () => {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
               <Button asChild size="lg" className="btn-primary">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0xfV2FkoGzYBioG5Pl17ZzLa0kVPlrK73R7uYtGRaqKhZwQ/viewform?usp=pp_url" target="_blank" rel="noopener noreferrer">Partager mon témoignage</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0xfV2FkoGzYBioG5Pl17ZzLa0kVPlrK73R7uYtGRaqKhZwQ/viewform?usp=pp_url" target="_blank" rel="noopener noreferrer">
+                  Partager mon témoignage
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 <a href="https://maps.app.goo.gl/khr3QxX531KpPKM66" target="_blank" rel="noopener noreferrer">
@@ -286,7 +319,9 @@ const Testimonials = () => {
               Contactez-nous dès aujourd'hui pour discuter de votre projet et rejoindre notre liste de clients satisfaits.
             </p>
             <Button asChild size="lg" className="btn-primary animate-on-scroll">
-              <Link to="/contact">Discuter de votre projet</Link>
+              <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                Discuter de votre projet
+              </a>
             </Button>
           </div>
         </div>

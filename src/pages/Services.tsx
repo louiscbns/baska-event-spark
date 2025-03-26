@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle, ChevronsDown, Diamond, GlassWater, Laptop, Music, Sparkles, UserRound, Users } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useState } from "react";
 
 // Service categories
 const serviceCategories = [
@@ -10,37 +18,37 @@ const serviceCategories = [
     id: "mariages",
     icon: Diamond,
     title: "Mariages",
-    description: "Nous prenons en charge tous les aspects de votre jour spécial, des premiers préparatifs à la dernière danse."
+    description: "Solutions DJ et sonorisation professionnelle pour votre mariage, de la cérémonie à la soirée dansante."
   },
   {
     id: "entreprise",
     icon: Laptop,
     title: "Événements d'entreprise",
-    description: "Des séminaires aux lancements de produits, nous créons des événements professionnels impactants."
+    description: "Services DJ et sonorisation adaptés à vos événements professionnels, des conférences aux soirées de gala."
   },
   {
     id: "anniversaires",
     icon: Calendar,
     title: "Anniversaires",
-    description: "Célébrez vos moments importants avec des fêtes d'anniversaire sur mesure pour tous les âges."
+    description: "Animation DJ et ambiance musicale personnalisée pour célébrer vos moments spéciaux."
   },
   {
     id: "soirees",
     icon: GlassWater,
     title: "Soirées privées",
-    description: "Nous organisons des soirées exclusives et élégantes dans des lieux d'exception."
+    description: "Solutions DJ et éclairage sur mesure pour créer l'ambiance parfaite de vos soirées."
   },
   {
     id: "concerts",
     icon: Music,
     title: "Concerts & Festivals",
-    description: "De la recherche d'artistes à la production technique, nous gérons tous les aspects de votre événement musical."
+    description: "Prestations DJ professionnelles et équipement technique complet pour vos événements musicaux."
   },
   {
     id: "sociaux",
     icon: Users,
     title: "Événements sociaux",
-    description: "Rencontres, galas, événements caritatifs et toutes occasions spéciales."
+    description: "Services DJ et sonorisation adaptés à vos événements sociaux et réceptions."
   }
 ];
 
@@ -48,193 +56,195 @@ const serviceCategories = [
 const serviceDetails = {
   mariages: {
     image: "/images/types/mariages/mariage-chateau-jardin.webp",
-    title: "Des mariages aussi uniques que votre amour",
-    description: "Nous transformons votre vision en une célébration parfaite, reflétant votre personnalité et votre histoire d'amour.",
+    title: "Nos solutions DJ pour votre Mariage",
+    description: "Notre but est de vous accompagner durant tous les préparatifs. Nous pourrons vous apporter de précieux conseils, ne serait-ce aussi dans d'autres domaines que la soirée DJ animation de Mariage, car nos compétences s'étendent bien au-delà.",
     features: [
-      "Coordination complète du jour J",
-      "Sélection des meilleurs prestataires",
-      "Conception et décoration personnalisées",
-      "Gestion des invités et de la logistique",
-      "Planification de la cérémonie et de la réception",
-      "Coordination des divertissements et animations"
+      "Coordination de votre Cérémonie avec sonorisation optimisée",
+      "Ambiance musicale au vin d'honneur",
+      "Accompagnement de vos interventions",
+      "Équipements de pointe pour un résultat optimal",
+      "Animation musicale personnalisée",
+      "Éclairage et ambiance lumineuse"
     ],
     process: [
       {
         title: "Consultation initiale",
-        description: "Nous prenons le temps de comprendre votre vision, vos préférences et votre budget."
+        description: "Nous prenons le temps de comprendre vos attentes musicales et vos préférences pour créer une ambiance parfaite."
       },
       {
         title: "Proposition de concept",
-        description: "Nous élaborons un concept unique qui reflète votre personnalité et votre histoire."
+        description: "Nous élaborons un concept musical unique qui reflète votre personnalité et votre histoire."
       },
       {
         title: "Planification détaillée",
-        description: "Nous gérons tous les aspects logistiques, des prestataires aux moindres détails."
+        description: "Nous gérons tous les aspects techniques, de la sonorisation à l'éclairage, pour une prestation parfaite."
       },
       {
         title: "Coordination du jour J",
-        description: "Notre équipe s'assure que tout se déroule parfaitement pour que vous puissiez profiter pleinement."
+        description: "Notre équipe de DJ professionnels s'assure que tout se déroule parfaitement pour une soirée mémorable."
       }
     ]
   },
   entreprise: {
     image: "/images/types/entreprises/entreprises-soiree-annuelle-entreprise-otis-paris-a-la-terasse-du-stade.jpeg",
-    title: "Des événements professionnels qui marquent",
-    description: "Nous concevons des événements d'entreprise stratégiques qui renforcent votre image de marque et atteignent vos objectifs.",
+    title: "Solutions DJ pour vos événements d'entreprise",
+    description: "Nous créons des ambiances musicales professionnelles adaptées à vos événements d'entreprise, des séminaires aux soirées de gala.",
     features: [
-      "Séminaires et conférences",
-      "Lancements de produits",
-      "Team buildings et incentives",
-      "Soirées d'entreprise et galas",
-      "Congrès et salons professionnels",
-      "Événements virtuels et hybrides"
+      "Sonorisation professionnelle pour conférences",
+      "Ambiance musicale pour cocktails et réceptions",
+      "Animation DJ pour soirées d'entreprise",
+      "Éclairage et effets visuels sur mesure",
+      "Coordination avec vos autres prestataires",
+      "Solutions techniques adaptées à vos lieux"
     ],
     process: [
       {
         title: "Analyse des besoins",
-        description: "Nous définissons précisément vos objectifs et les messages à transmettre."
+        description: "Nous définissons vos besoins en termes d'ambiance musicale et d'éclairage."
       },
       {
-        title: "Conception stratégique",
-        description: "Nous élaborons un concept d'événement aligné sur votre image de marque et vos objectifs."
+        title: "Conception technique",
+        description: "Nous élaborons une solution technique adaptée à votre événement."
       },
       {
         title: "Production complète",
-        description: "Nous gérons tous les aspects techniques, logistiques et créatifs."
+        description: "Nous gérons l'installation et la coordination technique."
       },
       {
-        title: "Mesure des résultats",
-        description: "Nous évaluons le succès de l'événement selon les KPIs définis ensemble."
+        title: "Suivi et ajustements",
+        description: "Nous assurons un suivi constant pour une prestation optimale."
       }
     ]
   },
   anniversaires: {
     image: "/images/types/anniversaires/anniversaire-grande-table-small.webp",
-    title: "Célébrez vos moments spéciaux avec éclat",
-    description: "Qu'il s'agisse d'un premier anniversaire ou d'une grande fête pour vos 50 ans, nous créons des célébrations personnalisées et mémorables.",
+    title: "Animation DJ pour vos anniversaires",
+    description: "Nous créons des ambiances musicales personnalisées pour rendre vos anniversaires mémorables.",
     features: [
-      "Conception thématique originale",
-      "Décoration sur mesure",
-      "Divertissements et animations adaptés",
-      "Gâteaux et traiteurs de qualité",
-      "Photographie et vidéographie",
-      "Cadeaux et souvenirs personnalisés"
+      "Animation DJ adaptée à tous les âges",
+      "Éclairage et effets visuels festifs",
+      "Playlist personnalisée selon vos goûts",
+      "Sonorisation de qualité",
+      "Coordination des moments forts",
+      "Ambiance musicale continue"
     ],
     process: [
       {
         title: "Discussion des envies",
-        description: "Nous explorons vos idées, préférences et le message que vous souhaitez transmettre."
+        description: "Nous explorons vos préférences musicales et vos attentes."
       },
       {
-        title: "Création d'un thème",
-        description: "Nous développons un concept créatif qui reflète la personnalité de la personne célébrée."
+        title: "Création d'ambiance",
+        description: "Nous développons une ambiance musicale unique."
       },
       {
-        title: "Organisation complète",
-        description: "Nous coordonnons tous les éléments, de la décoration au divertissement."
+        title: "Organisation technique",
+        description: "Nous coordonnons l'installation et les aspects techniques."
       },
       {
-        title: "Exécution parfaite",
-        description: "Nous veillons à ce que tout soit impeccable pour une célébration réussie."
+        title: "Animation de soirée",
+        description: "Nous assurons une animation musicale parfaite."
       }
     ]
   },
   soirees: {
     image: "/images/types/club/club-food-society-sebastien-small.webp",
-    title: "Des soirées exclusives dans des lieux d'exception",
-    description: "Nous concevons et organisons des soirées privées élégantes, raffinées et inoubliables dans des cadres exceptionnels.",
+    title: "Solutions DJ pour vos soirées privées",
+    description: "Nous créons des ambiances musicales exclusives pour vos soirées privées.",
     features: [
-      "Sélection de lieux prestigieux",
-      "Concepts créatifs originaux",
-      "Gastronomie et mixologie haut de gamme",
-      "Entertainment exclusif",
-      "Décoration et scénographie",
-      "Service personnalisé"
+      "Animation DJ professionnelle",
+      "Éclairage et effets visuels sur mesure",
+      "Sonorisation haut de gamme",
+      "Playlist personnalisée",
+      "Coordination technique complète",
+      "Ambiance musicale adaptée"
     ],
     process: [
       {
         title: "Définition du concept",
-        description: "Nous élaborons ensemble le concept de votre soirée selon vos envies."
+        description: "Nous élaborons ensemble le concept musical de votre soirée."
       },
       {
-        title: "Sélection du lieu",
-        description: "Nous trouvons le lieu parfait qui correspond à votre vision et au nombre d'invités."
+        title: "Préparation technique",
+        description: "Nous préparons l'installation et les équipements."
       },
       {
         title: "Création d'ambiance",
-        description: "Nous développons une ambiance unique à travers la décoration, la musique et les animations."
+        description: "Nous développons une ambiance unique."
       },
       {
-        title: "Coordination complète",
-        description: "Nous gérons tous les aspects de votre soirée pour que vous puissiez en profiter pleinement."
+        title: "Animation de soirée",
+        description: "Nous assurons une prestation musicale parfaite."
       }
     ]
   },
   concerts: {
     image: "/images/types/festival/festival-locomotives.webp",
-    title: "Des expériences musicales exceptionnelles",
-    description: "De l'organisation de concerts privés aux festivals complets, nous créons des expériences musicales immersives et mémorables.",
+    title: "Solutions DJ pour vos événements musicaux",
+    description: "Nous fournissons des prestations DJ professionnelles pour vos événements musicaux.",
     features: [
-      "Booking d'artistes et programmation",
-      "Production technique complète",
-      "Scénographie et éclairage",
-      "Gestion des autorisations et sécurité",
-      "Billetterie et accréditations",
-      "Hospitalité et zones VIP"
+      "Animation DJ de qualité",
+      "Équipement son et lumière professionnel",
+      "Coordination technique complète",
+      "Effets visuels sur mesure",
+      "Gestion des transitions",
+      "Solutions adaptées à tous les formats"
     ],
     process: [
       {
-        title: "Conception artistique",
-        description: "Nous définissons la programmation et l'identité artistique de votre événement."
+        title: "Conception technique",
+        description: "Nous définissons les besoins techniques de votre événement."
       },
       {
         title: "Production technique",
-        description: "Nous assurons tous les aspects techniques, du son à l'éclairage."
+        description: "Nous assurons l'installation et la configuration."
       },
       {
-        title: "Logistique et sécurité",
-        description: "Nous gérons les aspects réglementaires, la sécurité et le confort du public."
+        title: "Coordination",
+        description: "Nous gérons la coordination avec les autres prestataires."
       },
       {
-        title: "Expérience complète",
-        description: "Nous créons une expérience immersive qui va au-delà de la simple performance musicale."
+        title: "Animation",
+        description: "Nous assurons une prestation DJ professionnelle."
       }
     ]
   },
   sociaux: {
     image: "/images/types/galas/galas-balle-annuel-officiers-millitaires-small.webp",
-    title: "Des événements sociaux qui rassemblent",
-    description: "Nous organisons des événements sociaux élégants qui favorisent les rencontres et créent des liens durables.",
+    title: "Solutions DJ pour vos événements sociaux",
+    description: "Nous créons des ambiances musicales adaptées à vos événements sociaux.",
     features: [
-      "Galas et soirées de charité",
-      "Événements de networking",
-      "Cérémonies de remise de prix",
-      "Inaugurations et ouvertures",
-      "Événements associatifs",
-      "Rencontres communautaires"
+      "Animation DJ professionnelle",
+      "Éclairage et effets visuels élégants",
+      "Sonorisation de qualité",
+      "Coordination technique",
+      "Playlist adaptée à l'événement",
+      "Solutions sur mesure"
     ],
     process: [
       {
-        title: "Définition des objectifs",
-        description: "Nous clarifions le but de votre événement social et les résultats attendus."
+        title: "Analyse des besoins",
+        description: "Nous définissons vos besoins en animation musicale."
       },
       {
-        title: "Conception stratégique",
-        description: "Nous élaborons un concept qui favorise les interactions et les connexions."
+        title: "Conception technique",
+        description: "Nous élaborons une solution adaptée."
       },
       {
-        title: "Organisation complète",
-        description: "Nous gérons tous les aspects, de la logistique à la programmation."
+        title: "Organisation",
+        description: "Nous coordonnons l'installation et la technique."
       },
       {
-        title: "Évaluation du succès",
-        description: "Nous mesurons l'impact de votre événement selon les objectifs définis."
+        title: "Animation",
+        description: "Nous assurons une prestation musicale parfaite."
       }
     ]
   }
 };
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState("mariages");
+
   return (
     <>
       {/* Hero Section */}
@@ -252,7 +262,9 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">Demander un devis</Link>
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 <Link to="/realisations">Voir nos réalisations</Link>
@@ -271,12 +283,30 @@ const Services = () => {
             centered
           />
           
-          <Tabs defaultValue="mariages" className="w-full animate-on-scroll">
-            <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+          <div className="md:hidden mb-8">
+            <Select value={selectedService} onValueChange={setSelectedService}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Sélectionnez un service" />
+              </SelectTrigger>
+              <SelectContent>
+                {serviceCategories.map((category) => (
+                  <SelectItem key={category.id} value={category.id}>
+                    <div className="flex items-center gap-2">
+                      <category.icon className="h-4 w-4" />
+                      <span>{category.title}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <Tabs value={selectedService} onValueChange={setSelectedService} className="w-full animate-on-scroll">
+            <TabsList className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 mb-8">
               {serviceCategories.map((category) => (
                 <TabsTrigger key={category.id} value={category.id} className="flex items-center gap-2">
                   <category.icon className="h-4 w-4" />
-                  <span className="hidden md:inline">{category.title}</span>
+                  <span>{category.title}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -301,7 +331,9 @@ const Services = () => {
                     </div>
                     
                     <Button asChild className="btn-primary">
-                      <Link to="/contact">Discuter de votre projet</Link>
+                      <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                        Discuter de votre projet
+                      </a>
                     </Button>
                   </div>
                   
@@ -347,28 +379,28 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-6 animate-on-scroll">
             {[
               {
-                question: "Combien de temps à l'avance dois-je réserver vos services ?",
-                answer: "Nous recommandons de réserver nos services au moins 3 à 6 mois à l'avance pour les événements importants comme les mariages, et 2 à 3 mois pour les autres types d'événements. Cependant, nous pouvons également gérer des projets avec des délais plus courts selon notre disponibilité."
+                question: "Quel type d'équipement utilisez-vous ?",
+                answer: "Nous utilisons du matériel professionnel haut de gamme, incluant des systèmes de sonorisation de qualité, des éclairages LED modernes et des équipements DJ dernière génération. Notre matériel est régulièrement entretenu et mis à jour pour garantir des prestations optimales."
               },
               {
-                question: "Comment se déroule le processus de devis ?",
-                answer: "Après un premier contact, nous organisons une consultation pour comprendre vos besoins. Nous élaborons ensuite une proposition personnalisée détaillant les services et le budget. Après d'éventuels ajustements, le devis final vous est présenté pour approbation."
+                question: "Comment se déroule la consultation initiale ?",
+                answer: "Lors de notre première rencontre, nous discutons de vos attentes musicales, du type d'événement, du nombre d'invités et du lieu. Nous vous présentons nos différentes solutions techniques et nous élaborons ensemble un concept adapté à vos besoins."
               },
               {
-                question: "Travaillez-vous dans toute la France ?",
-                answer: "Oui, nous organisons des événements dans toute la France et à l'international. Notre équipe est mobile et s'adapte à vos besoins géographiques, avec une expertise particulière en région parisienne et sur la Côte d'Azur."
+                question: "Proposez-vous des playlists personnalisées ?",
+                answer: "Oui, nous créons des playlists sur mesure en fonction de vos goûts musicaux et de l'ambiance souhaitée. Nous prenons en compte le type d'événement, l'âge des invités et vos préférences pour créer une programmation musicale parfaite."
               },
               {
-                question: "Quels types de budgets pouvez-vous gérer ?",
-                answer: "Nous travaillons avec des budgets variés et adaptons nos prestations en fonction de vos moyens. Notre priorité est de créer un événement qui répond à vos attentes tout en respectant votre enveloppe budgétaire."
+                question: "Comment gérez-vous les transitions musicales ?",
+                answer: "Nos DJs professionnels maîtrisent parfaitement l'art des transitions musicales. Ils adaptent le rythme et le style en fonction de l'ambiance, des moments clés de l'événement et des réactions du public pour maintenir une énergie constante."
               },
               {
-                question: "Proposez-vous des formules ou tout est sur mesure ?",
-                answer: "Nous privilégions les prestations sur mesure pour répondre exactement à vos besoins. Cependant, nous proposons également des formules de base pour certains types d'événements, qui peuvent être personnalisées selon vos souhaits."
+                question: "Proposez-vous des solutions d'éclairage ?",
+                answer: "Oui, nous proposons des solutions d'éclairage complètes avec des effets visuels sur mesure. Nous utilisons des éclairages LED programmables, des projecteurs et des effets spéciaux pour créer l'ambiance parfaite."
               },
               {
-                question: "Comment assurez-vous la coordination le jour J ?",
-                answer: "Notre équipe est présente du début à la fin de votre événement. Un coordinateur dédié supervise tous les aspects logistiques, gère les prestataires et résout les éventuels imprévus, vous permettant de profiter pleinement de votre événement sans stress."
+                question: "Comment assurez-vous la qualité du son ?",
+                answer: "Nous effectuons une analyse acoustique du lieu avant chaque événement pour optimiser la disposition du matériel. Nos DJs professionnels effectuent des réglages précis pour garantir une qualité sonore optimale dans toute la salle."
               }
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-lg border border-border bg-card shadow-sm">
@@ -385,14 +417,18 @@ const Services = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-heading animate-on-scroll">
-              Prêt à concrétiser votre projet événementiel ?
+              Prêt à créer l'ambiance parfaite pour votre événement ?
             </h2>
             <p className="section-paragraph mx-auto mb-8 text-white/80 animate-on-scroll">
-              Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons créer un événement sur mesure qui dépasse vos attentes.
+              Contactez-nous pour discuter de vos besoins en animation musicale et sonorisation. Notre équipe de DJs professionnels vous accompagnera dans la création d'une ambiance unique et mémorable.
             </p>
-            <Button asChild size="lg" className="btn-primary animate-on-scroll">
-              <Link to="/contact">Demander un devis gratuit</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+              <Button asChild size="lg" className="btn-primary">
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

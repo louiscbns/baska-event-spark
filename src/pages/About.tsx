@@ -206,8 +206,10 @@ const About = () => {
               </div>
               
               <div className="mt-8 animate-on-scroll">
-                <Button asChild className="btn-primary">
-                  <Link to="/contact">Discuter de votre projet</Link>
+                <Button asChild size="lg" className="btn-primary animate-on-scroll">
+                  <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                    Discuter de votre projet
+                  </a>
                 </Button>
               </div>
             </div>
@@ -258,10 +260,9 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">Nous contacter</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
-                <Link to="/services">Explorer nos services</Link>
+                <a href="http://calendly.com/baska-events" target="_blank" rel="noopener noreferrer">
+                  Discuter de votre projet
+                </a>
               </Button>
             </div>
           </div>

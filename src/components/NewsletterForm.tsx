@@ -93,7 +93,7 @@ const NewsletterForm = () => {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Votre adresse email"
         required
-        className="flex-grow"
+        className="flex-grow text-black"
       />
       <Button 
         type="submit" 
