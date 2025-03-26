@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Layouts
 import MainLayout from "./layouts/MainLayout";
@@ -21,6 +21,14 @@ import DjParis from "./pages/DjParis";
 
 const queryClient = new QueryClient();
 
+// Redirections pour les anciennes URLs
+const redirections = [
+  { from: "/testimonials", to: "/temoignages" },
+  { from: "/about", to: "/a-propos" },
+  { from: "/services/dj", to: "/services" },
+  { from: "/portfolio/gallery", to: "/portfolio" }
+];
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -28,6 +36,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Redirections 301 */}
+          {redirections.map(({ from, to }) => (
+            <Route
+              key={from}
+              path={from}
+              element={<Navigate to={to} replace />}
+            />
+          ))}
+
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="a-propos" element={<About />} />

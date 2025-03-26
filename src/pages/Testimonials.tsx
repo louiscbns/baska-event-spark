@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 // Testimonials data
 const testimonials = [
@@ -123,6 +124,16 @@ const Testimonials = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Avis & Témoignages Clients - Baska Events | DJ Paris</title>
+        <meta name="description" content="Découvrez les avis et témoignages de nos clients satisfaits. DJ pour mariages, soirées d'entreprise et événements privés à Paris. Plus de 100 événements réussis." />
+        <meta name="keywords" content="avis DJ Paris, témoignages clients, recommandations DJ, satisfaction client, retours d'expérience, DJ événements Paris" />
+        <meta property="og:title" content="Avis & Témoignages Clients - Baska Events | DJ Paris" />
+        <meta property="og:description" content="Découvrez les avis et témoignages de nos clients satisfaits. Plus de 100 événements réussis à Paris et en Île-de-France." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.baska-events.fr/temoignages" />
+        <link rel="canonical" href="https://www.baska-events.fr/temoignages" />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-champagne-light dark:bg-charcoal">
         <div className="container-custom">

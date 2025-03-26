@@ -1,7 +1,30 @@
+# https://www.baska-events.fr/robots.txt
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
 # Sitemap
 Sitemap: https://www.baska-events.fr/sitemap.xml
+
+# Interdire l'accès aux pages d'administration et aux fichiers système
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+
+# Autoriser l'accès aux ressources statiques
+Allow: /images/
+Allow: /static/
+Allow: /assets/
+Allow: /fonts/
+Allow: /icons/
+
+# Paramètres spécifiques pour les robots majeurs
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

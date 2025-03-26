@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 // Service categories
 const serviceCategories = [
@@ -247,6 +248,16 @@ const Services = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Services DJ & Animation - Baska Events | Paris</title>
+        <meta name="description" content="Découvrez nos services de DJ et d'animation pour vos événements à Paris. DJ mariage, soirées d'entreprise, anniversaires et événements privés. Animation professionnelle et personnalisée." />
+        <meta name="keywords" content="DJ Paris, animation événement, DJ mariage, DJ entreprise, DJ soirée privée, animation soirée, DJ professionnel Paris" />
+        <meta property="og:title" content="Services DJ & Animation - Baska Events | Paris" />
+        <meta property="og:description" content="Découvrez nos services de DJ et d'animation pour vos événements à Paris. Animation professionnelle et personnalisée pour tous types d'événements." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.baska-events.fr/services" />
+        <link rel="canonical" href="https://www.baska-events.fr/services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-champagne-light dark:bg-charcoal">
         <div className="container-custom">

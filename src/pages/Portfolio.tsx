@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 // Portfolio items
 const portfolioItems = [
@@ -94,6 +95,17 @@ const Portfolio = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio DJ & Événements - Baska Events | Paris</title>
+        <meta name="description" content="Découvrez nos réalisations en tant que DJ et organisateur d'événements à Paris. Photos et vidéos de nos prestations : mariages, soirées d'entreprise, événements privés." />
+        <meta name="keywords" content="portfolio DJ Paris, réalisations événements, photos soirées, vidéos événements, prestations DJ, animation événementielle Paris" />
+        <meta property="og:title" content="Portfolio DJ & Événements - Baska Events | Paris" />
+        <meta property="og:description" content="Découvrez nos réalisations en tant que DJ et organisateur d'événements à Paris. Photos et vidéos de nos meilleures prestations." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.baska-events.fr/portfolio" />
+        <link rel="canonical" href="https://www.baska-events.fr/portfolio" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-champagne-light dark:bg-charcoal">
         <div className="container-custom">

@@ -47,6 +47,7 @@ const BlogPost = () => {
       <Helmet>
         <title>{post.title} - Baska Events</title>
         <meta name="description" content={post.excerpt} />
+        <meta name="robots" content="index, follow" />
         <meta name="keywords" content={`${post.category}, événementiel, Paris, ${post.category.toLowerCase()}, organisation événements`} />
         <meta property="og:title" content={`${post.title} - Baska Events`} />
         <meta property="og:description" content={post.excerpt} />
